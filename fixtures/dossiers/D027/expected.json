@@ -1,0 +1,58 @@
+{
+  "as_of": "2026-10-01",
+  "defect": "AMOUNT_OUT_OF_RANGE",
+  "expected_findings": [
+    "AMOUNT_OUT_OF_RANGE"
+  ],
+  "expected_decision": "needs_review",
+  "salary": {
+    "gross": 72100000,
+    "basic": 61300000,
+    "allowance": 10800000,
+    "insurance": 7570000,
+    "tax": 2676000,
+    "net": 61854000
+  },
+  "province": "Bắc Giang",
+  "style": {
+    "form": "table",
+    "payslip": "table",
+    "form_scanned": false
+  },
+  "documents": {
+    "don-de-nghi-vay.pdf": {
+      "doc_type": "application_form",
+      "fields": {
+        "full_name": "Bùi Hữu Tuấn",
+        "date_of_birth": "02/09/2000",
+        "id_number": "024200155521",
+        "phone": "0900442230",
+        "employer": "Công ty CP Thực phẩm An Phú",
+        "declared_monthly_income": "62 triệu đồng",
+        "existing_monthly_debt": "3.000.000 đồng",
+        "requested_amount": "600 triệu đồng",
+        "term_months": "5 năm"
+      }
+    },
+    "cccd.pdf": {
+      "doc_type": "national_id",
+      "fields": {
+        "full_name": "BÙI HỮU TUẤN",
+        "date_of_birth": "02/09/2000",
+        "id_number": "024200155521",
+        "sex": "Nam",
+        "expiry_date": "02/09/2040"
+      }
+    },
+    "phieu-luong.pdf": {
+      "doc_type": "payslip",
+      "fields": {
+        "employee_name": "Bùi Hữu Tuấn",
+        "employer": "CÔNG TY CP THỰC PHẨM AN PHÚ",
+        "pay_period": "09/2026",
+        "gross_income": "72.100.000 đồng",
+        "net_income": "61.854.000 đồng"
+      }
+    }
+  }
+}

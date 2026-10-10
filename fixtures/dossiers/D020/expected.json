@@ -1,0 +1,58 @@
+{
+  "as_of": "2026-10-01",
+  "defect": "ID_NUMBER_INCONSISTENT",
+  "expected_findings": [
+    "ID_NUMBER_INCONSISTENT"
+  ],
+  "expected_decision": "needs_review",
+  "salary": {
+    "gross": 40100000,
+    "basic": 34100000,
+    "allowance": 6000000,
+    "insurance": 4210000,
+    "tax": 1244000,
+    "net": 34646000
+  },
+  "province": "Hải Phòng",
+  "style": {
+    "form": "lines",
+    "payslip": "lines",
+    "form_scanned": false
+  },
+  "documents": {
+    "don-de-nghi-vay.pdf": {
+      "doc_type": "application_form",
+      "fields": {
+        "full_name": "Nguyễn Thanh Quân",
+        "date_of_birth": "24/3/1988",
+        "id_number": "031188561545",
+        "phone": "0994290091",
+        "employer": "Công ty CP Xây dựng Đông Á",
+        "declared_monthly_income": "35 triệu đồng",
+        "existing_monthly_debt": "2.000.000 đồng",
+        "requested_amount": "71 triệu đồng",
+        "term_months": "2 năm"
+      }
+    },
+    "cccd.pdf": {
+      "doc_type": "national_id",
+      "fields": {
+        "full_name": "NGUYỄN THANH QUÂN",
+        "date_of_birth": "24/03/1988",
+        "id_number": "031188561545",
+        "sex": "Nam",
+        "expiry_date": "24/03/2028"
+      }
+    },
+    "phieu-luong.pdf": {
+      "doc_type": "payslip",
+      "fields": {
+        "employee_name": "Nguyễn Thanh Quân",
+        "employer": "CÔNG TY CP XÂY DỰNG ĐÔNG Á",
+        "pay_period": "09/2026",
+        "gross_income": "40.100.000 đồng",
+        "net_income": "34.646.000 đồng"
+      }
+    }
+  }
+}

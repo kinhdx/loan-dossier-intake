@@ -1,0 +1,58 @@
+{
+  "as_of": "2026-10-01",
+  "defect": "ID_EXPIRED",
+  "expected_findings": [
+    "ID_EXPIRED"
+  ],
+  "expected_decision": "needs_review",
+  "salary": {
+    "gross": 30800000,
+    "basic": 26200000,
+    "allowance": 4600000,
+    "insurance": 3234000,
+    "tax": 828000,
+    "net": 26738000
+  },
+  "province": "Hà Nội",
+  "style": {
+    "form": "lines",
+    "payslip": "lines",
+    "form_scanned": false
+  },
+  "documents": {
+    "don-de-nghi-vay.pdf": {
+      "doc_type": "application_form",
+      "fields": {
+        "full_name": "Đỗ Đức Nam",
+        "date_of_birth": "07/09/2001",
+        "id_number": "001201950651",
+        "phone": "0906792635",
+        "employer": "Công ty CP Xây dựng Đông Á",
+        "declared_monthly_income": "27 triệu đồng",
+        "existing_monthly_debt": "2.000.000 đồng",
+        "requested_amount": "204 triệu đồng",
+        "term_months": "48 tháng"
+      }
+    },
+    "cccd.pdf": {
+      "doc_type": "national_id",
+      "fields": {
+        "full_name": "ĐỖ ĐỨC NAM",
+        "date_of_birth": "07/09/2001",
+        "id_number": "001201950651",
+        "sex": "Nam",
+        "expiry_date": "07/09/2026"
+      }
+    },
+    "phieu-luong.pdf": {
+      "doc_type": "payslip",
+      "fields": {
+        "employee_name": "Đỗ Đức Nam",
+        "employer": "CÔNG TY CP XÂY DỰNG ĐÔNG Á",
+        "pay_period": "09/2026",
+        "gross_income": "30.800.000 đồng",
+        "net_income": "26.738.000 đồng"
+      }
+    }
+  }
+}

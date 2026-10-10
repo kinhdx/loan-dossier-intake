@@ -1,0 +1,57 @@
+{
+  "as_of": "2026-10-01",
+  "defect": "clean",
+  "expected_findings": [],
+  "expected_decision": "ready_for_underwriting",
+  "salary": {
+    "gross": 16300000,
+    "basic": 13900000,
+    "allowance": 2400000,
+    "insurance": 1712000,
+    "tax": 179000,
+    "net": 14409000
+  },
+  "province": "Hải Phòng",
+  "style": {
+    "form": "lines",
+    "payslip": "table_ytd_first",
+    "form_scanned": true,
+    "correction": "121.000.000 đồng"
+  },
+  "documents": {
+    "don-de-nghi-vay.pdf": {
+      "doc_type": "application_form",
+      "fields": {
+        "full_name": "Nguyễn Quang Thắng",
+        "date_of_birth": "08/01/1994",
+        "id_number": "031094354392",
+        "phone": "0984672671",
+        "employer": "Công ty TNHH Phần mềm Sao Mai",
+        "declared_monthly_income": "14.409.000 đồng",
+        "existing_monthly_debt": "0 đồng",
+        "requested_amount": "41.000.000 đồng",
+        "term_months": "12 tháng"
+      }
+    },
+    "cccd.pdf": {
+      "doc_type": "national_id",
+      "fields": {
+        "full_name": "NGUYỄN QUANG THẮNG",
+        "date_of_birth": "08/01/1994",
+        "id_number": "031094354392",
+        "sex": "Nam",
+        "expiry_date": "08/01/2034"
+      }
+    },
+    "phieu-luong.pdf": {
+      "doc_type": "payslip",
+      "fields": {
+        "employee_name": "Nguyễn Quang Thắng",
+        "employer": "CÔNG TY TNHH PHẦN MỀM SAO MAI",
+        "pay_period": "09/2026",
+        "gross_income": "16.300.000 đồng",
+        "net_income": "14.409.000 đồng"
+      }
+    }
+  }
+}

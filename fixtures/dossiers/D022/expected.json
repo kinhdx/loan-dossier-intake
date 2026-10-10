@@ -1,0 +1,58 @@
+{
+  "as_of": "2026-10-01",
+  "defect": "NAME_MISMATCH",
+  "expected_findings": [
+    "NAME_MISMATCH"
+  ],
+  "expected_decision": "needs_review",
+  "salary": {
+    "gross": 14000000,
+    "basic": 11900000,
+    "allowance": 2100000,
+    "insurance": 1470000,
+    "tax": 76000,
+    "net": 12454000
+  },
+  "province": "Hải Phòng",
+  "style": {
+    "form": "lines",
+    "payslip": "lines",
+    "form_scanned": false
+  },
+  "documents": {
+    "don-de-nghi-vay.pdf": {
+      "doc_type": "application_form",
+      "fields": {
+        "full_name": "Đặng Mai Trang",
+        "date_of_birth": "14/08/1984",
+        "id_number": "031184495454",
+        "phone": "0915863103",
+        "employer": "Công ty CP Xây dựng Đông Á",
+        "declared_monthly_income": "12.454.000 đồng",
+        "existing_monthly_debt": "1.500.000 đồng",
+        "requested_amount": "135.000.000 đồng",
+        "term_months": "4 năm"
+      }
+    },
+    "cccd.pdf": {
+      "doc_type": "national_id",
+      "fields": {
+        "full_name": "ĐẶNG THỊ TRANG",
+        "date_of_birth": "14/08/1984",
+        "id_number": "031184495454",
+        "sex": "Nữ",
+        "expiry_date": "14/08/2044"
+      }
+    },
+    "phieu-luong.pdf": {
+      "doc_type": "payslip",
+      "fields": {
+        "employee_name": "Đặng Thị Trang",
+        "employer": "CÔNG TY CP XÂY DỰNG ĐÔNG Á",
+        "pay_period": "09/2026",
+        "gross_income": "14.000.000 đồng",
+        "net_income": "12.454.000 đồng"
+      }
+    }
+  }
+}

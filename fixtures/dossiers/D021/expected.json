@@ -1,0 +1,56 @@
+{
+  "as_of": "2026-10-01",
+  "defect": "clean",
+  "expected_findings": [],
+  "expected_decision": "ready_for_underwriting",
+  "salary": {
+    "gross": 41300000,
+    "basic": 35100000,
+    "allowance": 6200000,
+    "insurance": 4336000,
+    "tax": 1298000,
+    "net": 35666000
+  },
+  "province": "Hải Phòng",
+  "style": {
+    "form": "table",
+    "payslip": "lines",
+    "form_scanned": false
+  },
+  "documents": {
+    "don-de-nghi-vay.pdf": {
+      "doc_type": "application_form",
+      "fields": {
+        "full_name": "Dương Minh Quân",
+        "date_of_birth": "21/2/1997",
+        "id_number": "031097503532",
+        "phone": "0923496556",
+        "employer": "Công ty CP Xây dựng Đông Á",
+        "declared_monthly_income": "35.666.000 đồng",
+        "existing_monthly_debt": "0 đồng",
+        "requested_amount": "147.000.000 đồng",
+        "term_months": "12 tháng"
+      }
+    },
+    "cccd.pdf": {
+      "doc_type": "national_id",
+      "fields": {
+        "full_name": "DƯƠNG MINH QUÂN",
+        "date_of_birth": "21/02/1997",
+        "id_number": "031097503532",
+        "sex": "Nam",
+        "expiry_date": "21/02/2037"
+      }
+    },
+    "phieu-luong.pdf": {
+      "doc_type": "payslip",
+      "fields": {
+        "employee_name": "Dương Minh Quân",
+        "employer": "CÔNG TY CP XÂY DỰNG ĐÔNG Á",
+        "pay_period": "09/2026",
+        "gross_income": "41.300.000 đồng",
+        "net_income": "35.666.000 đồng"
+      }
+    }
+  }
+}

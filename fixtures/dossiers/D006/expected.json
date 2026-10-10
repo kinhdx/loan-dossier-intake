@@ -1,0 +1,56 @@
+{
+  "as_of": "2026-10-01",
+  "defect": "clean",
+  "expected_findings": [],
+  "expected_decision": "ready_for_underwriting",
+  "salary": {
+    "gross": 27900000,
+    "basic": 23700000,
+    "allowance": 4200000,
+    "insurance": 2930000,
+    "tax": 698000,
+    "net": 24272000
+  },
+  "province": "Bắc Giang",
+  "style": {
+    "form": "table",
+    "payslip": "lines",
+    "form_scanned": false
+  },
+  "documents": {
+    "don-de-nghi-vay.pdf": {
+      "doc_type": "application_form",
+      "fields": {
+        "full_name": "Bùi Văn Dũng",
+        "date_of_birth": "24/01/1983",
+        "id_number": "024083370637",
+        "phone": "0926763457",
+        "employer": "Công ty TNHH Vận tải Hưng Thịnh",
+        "declared_monthly_income": "24 triệu đồng",
+        "existing_monthly_debt": "1.500.000 đồng",
+        "requested_amount": "52 triệu đồng",
+        "term_months": "12 tháng"
+      }
+    },
+    "cccd.pdf": {
+      "doc_type": "national_id",
+      "fields": {
+        "full_name": "BÙI VĂN DŨNG",
+        "date_of_birth": "24/01/1983",
+        "id_number": "024083370637",
+        "sex": "Nam",
+        "expiry_date": "24/01/2043"
+      }
+    },
+    "phieu-luong.pdf": {
+      "doc_type": "payslip",
+      "fields": {
+        "employee_name": "Bùi Văn Dũng",
+        "employer": "CÔNG TY TNHH VẬN TẢI HƯNG THỊNH",
+        "pay_period": "09/2026",
+        "gross_income": "27.900.000 đồng",
+        "net_income": "24.272.000 đồng"
+      }
+    }
+  }
+}

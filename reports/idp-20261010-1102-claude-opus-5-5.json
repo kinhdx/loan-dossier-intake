@@ -1,0 +1,411 @@
+{
+ "model": "claude-opus-5-5",
+ "classify_model": "claude-haiku-5-5",
+ "rows": [
+  {
+   "dossier": "H001",
+   "defect": "ID_EXPIRED",
+   "expected_decision": "needs_review",
+   "decision": "needs_review",
+   "decision_ok": true,
+   "expected_findings": [
+    "ID_EXPIRED"
+   ],
+   "findings": [
+    "ID_EXPIRED"
+   ],
+   "defect_found": true,
+   "unexpected_findings": [],
+   "documents": 3,
+   "classified_ok": 3,
+   "fields_total": {
+    "text": 5,
+    "scanned": 14
+   },
+   "fields_ok": {
+    "text": 5,
+    "scanned": 14
+   },
+   "field_misses": [],
+   "cost_usd": 0.05011,
+   "seconds": 19.36,
+   "tokens_in": 12262,
+   "tokens_out": 1077
+  },
+  {
+   "dossier": "H002",
+   "defect": "clean",
+   "expected_decision": "ready_for_underwriting",
+   "decision": "ready_for_underwriting",
+   "decision_ok": true,
+   "expected_findings": [],
+   "findings": [],
+   "defect_found": false,
+   "unexpected_findings": [],
+   "documents": 3,
+   "classified_ok": 3,
+   "fields_total": {
+    "text": 5,
+    "scanned": 14
+   },
+   "fields_ok": {
+    "text": 5,
+    "scanned": 14
+   },
+   "field_misses": [],
+   "cost_usd": 0.05099,
+   "seconds": 11.08,
+   "tokens_in": 12262,
+   "tokens_out": 1121
+  },
+  {
+   "dossier": "H003",
+   "defect": "clean",
+   "expected_decision": "ready_for_underwriting",
+   "decision": "needs_review",
+   "decision_ok": false,
+   "expected_findings": [],
+   "findings": [
+    "DOB_MISMATCH",
+    "ID_EXPIRED",
+    "ID_NUMBER_INCONSISTENT"
+   ],
+   "defect_found": false,
+   "unexpected_findings": [
+    "DOB_MISMATCH",
+    "ID_EXPIRED",
+    "ID_NUMBER_INCONSISTENT"
+   ],
+   "documents": 3,
+   "classified_ok": 3,
+   "fields_total": {
+    "text": 5,
+    "scanned": 14
+   },
+   "fields_ok": {
+    "text": 5,
+    "scanned": 12
+   },
+   "field_misses": [
+    {
+     "document": "cccd.pdf",
+     "field": "date_of_birth",
+     "expected": "22/07/1989",
+     "got": "22/01/1985"
+    },
+    {
+     "document": "cccd.pdf",
+     "field": "expiry_date",
+     "expected": "22/07/2029",
+     "got": "22/01/2025"
+    }
+   ],
+   "cost_usd": 0.04693,
+   "seconds": 11.56,
+   "tokens_in": 12262,
+   "tokens_out": 918
+  },
+  {
+   "dossier": "H004",
+   "defect": "clean",
+   "expected_decision": "ready_for_underwriting",
+   "decision": "needs_review",
+   "decision_ok": false,
+   "expected_findings": [],
+   "findings": [
+    "NAME_DIACRITICS_DIFFER"
+   ],
+   "defect_found": false,
+   "unexpected_findings": [
+    "NAME_DIACRITICS_DIFFER"
+   ],
+   "documents": 3,
+   "classified_ok": 3,
+   "fields_total": {
+    "text": 5,
+    "scanned": 14
+   },
+   "fields_ok": {
+    "text": 5,
+    "scanned": 13
+   },
+   "field_misses": [
+    {
+     "document": "cccd.pdf",
+     "field": "full_name",
+     "expected": "NGÔ THÙY MAI",
+     "got": "NGÔ THÚY MAI"
+    }
+   ],
+   "cost_usd": 0.04692,
+   "seconds": 10.7,
+   "tokens_in": 12256,
+   "tokens_out": 918
+  },
+  {
+   "dossier": "H005",
+   "defect": "DTI_ABOVE_LIMIT",
+   "expected_decision": "needs_review",
+   "decision": "needs_review",
+   "decision_ok": true,
+   "expected_findings": [
+    "DTI_ABOVE_LIMIT"
+   ],
+   "findings": [
+    "DTI_ABOVE_LIMIT"
+   ],
+   "defect_found": true,
+   "unexpected_findings": [],
+   "documents": 3,
+   "classified_ok": 3,
+   "fields_total": {
+    "text": 5,
+    "scanned": 14
+   },
+   "fields_ok": {
+    "text": 5,
+    "scanned": 14
+   },
+   "field_misses": [],
+   "cost_usd": 0.04674,
+   "seconds": 8.95,
+   "tokens_in": 12256,
+   "tokens_out": 909
+  },
+  {
+   "dossier": "H006",
+   "defect": "INCOME_ABOVE_PAYSLIP",
+   "expected_decision": "needs_review",
+   "decision": "needs_review",
+   "decision_ok": true,
+   "expected_findings": [
+    "INCOME_ABOVE_PAYSLIP"
+   ],
+   "findings": [
+    "INCOME_ABOVE_PAYSLIP",
+    "MISSING_FIELD",
+    "NAME_DIACRITICS_DIFFER"
+   ],
+   "defect_found": true,
+   "unexpected_findings": [
+    "MISSING_FIELD",
+    "NAME_DIACRITICS_DIFFER"
+   ],
+   "documents": 3,
+   "classified_ok": 3,
+   "fields_total": {
+    "text": 5,
+    "scanned": 14
+   },
+   "fields_ok": {
+    "text": 5,
+    "scanned": 12
+   },
+   "field_misses": [
+    {
+     "document": "cccd.pdf",
+     "field": "full_name",
+     "expected": "HỒ THÙY LAN",
+     "got": "HỒ THÚY LAN"
+    },
+    {
+     "document": "don-de-nghi-vay.pdf",
+     "field": "term_months",
+     "expected": "4 năm",
+     "got": ""
+    }
+   ],
+   "cost_usd": 0.04672,
+   "seconds": 8.88,
+   "tokens_in": 12264,
+   "tokens_out": 907
+  },
+  {
+   "dossier": "H007",
+   "defect": "clean",
+   "expected_decision": "ready_for_underwriting",
+   "decision": "ready_for_underwriting",
+   "decision_ok": true,
+   "expected_findings": [],
+   "findings": [],
+   "defect_found": false,
+   "unexpected_findings": [],
+   "documents": 3,
+   "classified_ok": 3,
+   "fields_total": {
+    "text": 5,
+    "scanned": 14
+   },
+   "fields_ok": {
+    "text": 5,
+    "scanned": 14
+   },
+   "field_misses": [],
+   "cost_usd": 0.04744,
+   "seconds": 10.28,
+   "tokens_in": 12264,
+   "tokens_out": 943
+  },
+  {
+   "dossier": "H008",
+   "defect": "NAME_MISMATCH",
+   "expected_decision": "needs_review",
+   "decision": "needs_review",
+   "decision_ok": true,
+   "expected_findings": [
+    "NAME_MISMATCH"
+   ],
+   "findings": [
+    "NAME_MISMATCH"
+   ],
+   "defect_found": true,
+   "unexpected_findings": [],
+   "documents": 3,
+   "classified_ok": 3,
+   "fields_total": {
+    "text": 5,
+    "scanned": 14
+   },
+   "fields_ok": {
+    "text": 5,
+    "scanned": 14
+   },
+   "field_misses": [],
+   "cost_usd": 0.04756,
+   "seconds": 9.64,
+   "tokens_in": 12266,
+   "tokens_out": 949
+  },
+  {
+   "dossier": "H009",
+   "defect": "ID_MISMATCH",
+   "expected_decision": "needs_review",
+   "decision": "needs_review",
+   "decision_ok": true,
+   "expected_findings": [
+    "ID_MISMATCH"
+   ],
+   "findings": [
+    "ID_MISMATCH",
+    "MISSING_FIELD"
+   ],
+   "defect_found": true,
+   "unexpected_findings": [
+    "MISSING_FIELD"
+   ],
+   "documents": 3,
+   "classified_ok": 3,
+   "fields_total": {
+    "text": 5,
+    "scanned": 14
+   },
+   "fields_ok": {
+    "text": 5,
+    "scanned": 9
+   },
+   "field_misses": [
+    {
+     "document": "cccd.pdf",
+     "field": "date_of_birth",
+     "expected": "02/12/1991",
+     "got": ""
+    },
+    {
+     "document": "cccd.pdf",
+     "field": "id_number",
+     "expected": "024191518141",
+     "got": "024191516141"
+    },
+    {
+     "document": "cccd.pdf",
+     "field": "sex",
+     "expected": "Nữ",
+     "got": ""
+    },
+    {
+     "document": "cccd.pdf",
+     "field": "expiry_date",
+     "expected": "02/12/2031",
+     "got": ""
+    },
+    {
+     "document": "don-de-nghi-vay.pdf",
+     "field": "term_months",
+     "expected": "5 năm",
+     "got": ""
+    }
+   ],
+   "cost_usd": 0.0501,
+   "seconds": 8.45,
+   "tokens_in": 12266,
+   "tokens_out": 1076
+  },
+  {
+   "dossier": "H010",
+   "defect": "clean",
+   "expected_decision": "ready_for_underwriting",
+   "decision": "needs_review",
+   "decision_ok": false,
+   "expected_findings": [],
+   "findings": [
+    "NAME_DIACRITICS_DIFFER"
+   ],
+   "defect_found": false,
+   "unexpected_findings": [
+    "NAME_DIACRITICS_DIFFER"
+   ],
+   "documents": 3,
+   "classified_ok": 3,
+   "fields_total": {
+    "text": 5,
+    "scanned": 14
+   },
+   "fields_ok": {
+    "text": 5,
+    "scanned": 13
+   },
+   "field_misses": [
+    {
+     "document": "cccd.pdf",
+     "field": "full_name",
+     "expected": "NGÔ THÙY NGÂN",
+     "got": "NGÔ THÚY NGÂN"
+    }
+   ],
+   "cost_usd": 0.04716,
+   "seconds": 9.27,
+   "tokens_in": 12258,
+   "tokens_out": 930
+  }
+ ],
+ "summary": {
+  "all": {
+   "dossiers": 10,
+   "decision_accuracy_pct": 70.0,
+   "defect_recall_pct": 100.0,
+   "false_review_rate_pct": 60.0,
+   "ready_with_wrong_data": 0,
+   "classification_accuracy_pct": 100.0,
+   "field_accuracy_text_pct": 100.0,
+   "field_accuracy_scanned_pct": 92.1,
+   "cost_per_dossier_usd": 0.0481,
+   "latency_p50_s": 9.96,
+   "latency_p95_s": 11.56,
+   "total_cost_usd": 0.4807
+  },
+  "stress": {
+   "dossiers": 10,
+   "decision_accuracy_pct": 70.0,
+   "defect_recall_pct": 100.0,
+   "false_review_rate_pct": 60.0,
+   "ready_with_wrong_data": 0,
+   "classification_accuracy_pct": 100.0,
+   "field_accuracy_text_pct": 100.0,
+   "field_accuracy_scanned_pct": 92.1,
+   "cost_per_dossier_usd": 0.0481,
+   "latency_p50_s": 9.96,
+   "latency_p95_s": 11.56,
+   "total_cost_usd": 0.4807
+  }
+ }
+}

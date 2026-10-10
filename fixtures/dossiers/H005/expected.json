@@ -1,0 +1,59 @@
+{
+  "as_of": "2026-10-01",
+  "defect": "DTI_ABOVE_LIMIT",
+  "expected_findings": [
+    "DTI_ABOVE_LIMIT"
+  ],
+  "expected_decision": "needs_review",
+  "salary": {
+    "gross": 22100000,
+    "basic": 18800000,
+    "allowance": 3300000,
+    "insurance": 2320000,
+    "tax": 439000,
+    "net": 19341000
+  },
+  "province": "Hải Phòng",
+  "style": {
+    "form": "lines",
+    "payslip": "table_ytd_first",
+    "form_scanned": true,
+    "correction": "286.000.000 đồng"
+  },
+  "documents": {
+    "don-de-nghi-vay.pdf": {
+      "doc_type": "application_form",
+      "fields": {
+        "full_name": "Dương Thùy Yến",
+        "date_of_birth": "10/06/1981",
+        "id_number": "031181478284",
+        "phone": "0948074748",
+        "employer": "Công ty TNHH Phần mềm Sao Mai",
+        "declared_monthly_income": "19 triệu đồng",
+        "existing_monthly_debt": "0 đồng",
+        "requested_amount": "206.000.000 đồng",
+        "term_months": "12 tháng"
+      }
+    },
+    "cccd.pdf": {
+      "doc_type": "national_id",
+      "fields": {
+        "full_name": "DƯƠNG THÙY YẾN",
+        "date_of_birth": "10/06/1981",
+        "id_number": "031181478284",
+        "sex": "Nữ",
+        "expiry_date": "10/06/2041"
+      }
+    },
+    "phieu-luong.pdf": {
+      "doc_type": "payslip",
+      "fields": {
+        "employee_name": "Dương Thùy Yến",
+        "employer": "CÔNG TY TNHH PHẦN MỀM SAO MAI",
+        "pay_period": "09/2026",
+        "gross_income": "22.100.000 đồng",
+        "net_income": "19.341.000 đồng"
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "as_of": "2026-10-01",
+  "defect": "clean",
+  "expected_findings": [],
+  "expected_decision": "ready_for_underwriting",
+  "salary": {
+    "gross": 44200000,
+    "basic": 37600000,
+    "allowance": 6600000,
+    "insurance": 4641000,
+    "tax": 1428000,
+    "net": 38131000
+  },
+  "province": "Đà Nẵng",
+  "style": {
+    "form": "lines",
+    "payslip": "table",
+    "form_scanned": false
+  },
+  "documents": {
+    "don-de-nghi-vay.pdf": {
+      "doc_type": "application_form",
+      "fields": {
+        "full_name": "Dương Ngọc Lan",
+        "date_of_birth": "07/05/1998",
+        "id_number": "048198971054",
+        "phone": "0979810172",
+        "employer": "Công ty TNHH Điện tử Minh Quang",
+        "declared_monthly_income": "38 triệu đồng",
+        "existing_monthly_debt": "2.000.000 đồng",
+        "requested_amount": "30 triệu đồng",
+        "term_months": "12 tháng"
+      }
+    },
+    "cccd.pdf": {
+      "doc_type": "national_id",
+      "fields": {
+        "full_name": "DƯƠNG NGỌC LAN",
+        "date_of_birth": "07/05/1998",
+        "id_number": "048198971054",
+        "sex": "Nữ",
+        "expiry_date": "07/05/2038"
+      }
+    },
+    "phieu-luong.pdf": {
+      "doc_type": "payslip",
+      "fields": {
+        "employee_name": "Dương Ngọc Lan",
+        "employer": "CÔNG TY TNHH ĐIỆN TỬ MINH QUANG",
+        "pay_period": "09/2026",
+        "gross_income": "44.200.000 đồng",
+        "net_income": "38.131.000 đồng"
+      }
+    }
+  }
+}

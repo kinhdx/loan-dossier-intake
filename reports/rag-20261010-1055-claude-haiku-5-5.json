@@ -1,0 +1,1302 @@
+{
+ "model": "claude-haiku-5-5",
+ "embedding_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+ "top_k": 4,
+ "rows": [
+  {
+   "id": "q01",
+   "question": "Khách hàng 21 tuổi có đủ tuổi vay không? Tuổi tối thiểu là bao nhiêu?",
+   "in_scope": true,
+   "answerable": true,
+   "answer": "Có. Khách hàng phải đủ 20 tuổi tại thời điểm nộp hồ sơ, nên khách hàng 21 tuổi đáp ứng điều kiện độ tuổi tối thiểu. Tuổi tối thiểu là 20 tuổi tại thời điểm nộp hồ sơ.",
+   "citations": [
+    "dieu-kien-vay#2"
+   ],
+   "retrieved": [
+    [
+     "dieu-kien-vay#2",
+     1.175
+    ],
+    [
+     "dieu-kien-vay#3",
+     0.775
+    ],
+    [
+     "dieu-kien-vay#4",
+     0.744
+    ],
+    [
+     "han-muc-lai-suat#3",
+     0.714
+    ]
+   ],
+   "gold": [
+    "dieu-kien-vay#2"
+   ],
+   "rank": 1,
+   "facts_ok": true,
+   "cites_gold": true,
+   "cost_usd": 0.00018,
+   "seconds": 2.61
+  },
+  {
+   "id": "q02",
+   "question": "Một người 57 tuổi thì được vay tối đa bao lâu?",
+   "in_scope": true,
+   "answerable": true,
+   "answer": "Khách hàng 57 tuổi chỉ được vay kỳ hạn tối đa 36 tháng, theo ví dụ trong chính sách về độ tuổi (tuổi tại thời điểm kết thúc khoản vay không vượt quá 60 tuổi).",
+   "citations": [
+    "dieu-kien-vay#2"
+   ],
+   "retrieved": [
+    [
+     "dieu-kien-vay#2",
+     1.067
+    ],
+    [
+     "han-muc-lai-suat#2",
+     0.668
+    ],
+    [
+     "bao-ve-du-lieu#4",
+     0.668
+    ],
+    [
+     "dieu-kien-vay#3",
+     0.644
+    ]
+   ],
+   "gold": [
+    "dieu-kien-vay#2"
+   ],
+   "rank": 1,
+   "facts_ok": true,
+   "cites_gold": true,
+   "cost_usd": 0.00017,
+   "seconds": 2.61
+  },
+  {
+   "id": "q03",
+   "question": "Lương thực nhận tối thiểu mỗi tháng để được vay là bao nhiêu?",
+   "in_scope": true,
+   "answerable": true,
+   "answer": "Thu nhập ròng hằng tháng (lương thực nhận sau thuế và bảo hiểm) tối thiểu là 8.000.000 đồng, căn cứ theo phiếu lương tháng gần nhất.",
+   "citations": [
+    "dieu-kien-vay#3"
+   ],
+   "retrieved": [
+    [
+     "dieu-kien-vay#3",
+     1.136
+    ],
+    [
+     "tham-dinh-thu-nhap#5",
+     0.943
+    ],
+    [
+     "ho-so-yeu-cau#2",
+     0.754
+    ],
+    [
+     "han-muc-lai-suat#1",
+     0.752
+    ]
+   ],
+   "gold": [
+    "dieu-kien-vay#3"
+   ],
+   "rank": 1,
+   "facts_ok": true,
+   "cites_gold": true,
+   "cost_usd": 0.00015,
+   "seconds": 2.39
+  },
+  {
+   "id": "q04",
+   "question": "Nhân viên mới vào công ty được 3 tháng có vay được không?",
+   "in_scope": true,
+   "answerable": true,
+   "answer": "Không đủ điều kiện. Khách hàng phải làm việc tại đơn vị hiện tại tối thiểu 6 tháng liên tục, có hợp đồng lao động từ 12 tháng trở lên hoặc hợp đồng không xác định thời hạn. Nhân viên mới 3 tháng chưa đáp ứng yêu cầu thời gian công tác 6 tháng.",
+   "citations": [
+    "dieu-kien-vay#4"
+   ],
+   "retrieved": [
+    [
+     "dieu-kien-vay#4",
+     0.821
+    ],
+    [
+     "tham-dinh-thu-nhap#5",
+     0.794
+    ],
+    [
+     "ho-so-yeu-cau#2",
+     0.766
+    ],
+    [
+     "han-muc-lai-suat#4",
+     0.763
+    ]
+   ],
+   "gold": [
+    "dieu-kien-vay#4"
+   ],
+   "rank": 1,
+   "facts_ok": true,
+   "cites_gold": true,
+   "cost_usd": 0.00019,
+   "seconds": 2.47
+  },
+  {
+   "id": "q05",
+   "question": "Người tự kinh doanh có dùng được sản phẩm này không?",
+   "in_scope": true,
+   "answerable": true,
+   "answer": "Không. Theo chính sách, khách hàng là công dân Việt Nam đang cư trú tại Việt Nam và có thu nhập thường xuyên từ tiền lương do đơn vị sử dụng lao động chi trả qua tài khoản ngân hàng. Khách hàng tự doanh, hộ kinh doanh và người nhận lương bằng tiền mặt không thuộc phạm vi sản phẩm này.",
+   "citations": [
+    "dieu-kien-vay#1"
+   ],
+   "retrieved": [
+    [
+     "dieu-kien-vay#1",
+     0.627
+    ],
+    [
+     "quy-trinh-xu-ly#1",
+     0.351
+    ],
+    [
+     "bao-ve-du-lieu#3",
+     0.327
+    ],
+    [
+     "dieu-kien-vay#6",
+     0.303
+    ]
+   ],
+   "gold": [
+    "dieu-kien-vay#1"
+   ],
+   "rank": 1,
+   "facts_ok": true,
+   "cites_gold": true,
+   "cost_usd": 0.00021,
+   "seconds": 2.42
+  },
+  {
+   "id": "q06",
+   "question": "Khách từng có nợ nhóm 2 cách đây 8 tháng thì xử lý thế nào?",
+   "in_scope": true,
+   "answerable": true,
+   "answer": "Theo chính sách, khách hàng không được có nợ nhóm 2 trở lên tại bất kỳ tổ chức tín dụng nào trong 12 tháng gần nhất, theo kết quả tra cứu thông tin tín dụng tại thời điểm thẩm định. Vì khoản nợ nhóm 2 cách đây 8 tháng vẫn nằm trong khoảng 12 tháng gần nhất, khách hàng không đáp ứng điều kiện này.",
+   "citations": [
+    "dieu-kien-vay#5"
+   ],
+   "retrieved": [
+    [
+     "dieu-kien-vay#5",
+     0.914
+    ],
+    [
+     "han-muc-lai-suat#4",
+     0.722
+    ],
+    [
+     "han-muc-lai-suat#3",
+     0.697
+    ],
+    [
+     "tham-dinh-thu-nhap#5",
+     0.676
+    ]
+   ],
+   "gold": [
+    "dieu-kien-vay#5"
+   ],
+   "rank": 1,
+   "facts_ok": true,
+   "cites_gold": true,
+   "cost_usd": 0.00021,
+   "seconds": 2.47
+  },
+  {
+   "id": "q07",
+   "question": "Khách đang có một khoản vay tín chấp khác tại ngân hàng chưa trả xong thì có vay thêm được không?",
+   "in_scope": true,
+   "answerable": true,
+   "answer": "Không. Theo chính sách, không cấp tín dụng cho khách hàng đang có khoản vay tiêu dùng tín chấp khác tại ngân hàng chưa tất toán.",
+   "citations": [
+    "dieu-kien-vay#6"
+   ],
+   "retrieved": [
+    [
+     "dieu-kien-vay#6",
+     1.029
+    ],
+    [
+     "dieu-kien-vay#5",
+     0.82
+    ],
+    [
+     "ho-so-yeu-cau#2",
+     0.766
+    ],
+    [
+     "tham-dinh-thu-nhap#5",
+     0.747
+    ]
+   ],
+   "gold": [
+    "dieu-kien-vay#6"
+   ],
+   "rank": 1,
+   "facts_ok": true,
+   "cites_gold": true,
+   "cost_usd": 0.00016,
+   "seconds": 2.17
+  },
+  {
+   "id": "q08",
+   "question": "Số tiền vay tối đa và tối thiểu là bao nhiêu?",
+   "in_scope": true,
+   "answerable": true,
+   "answer": "Số tiền vay từ 10.000.000 đồng đến 500.000.000 đồng và không vượt quá 12 lần thu nhập ròng hằng tháng của khách hàng.",
+   "citations": [
+    "han-muc-lai-suat#1"
+   ],
+   "retrieved": [
+    [
+     "dieu-kien-vay#3",
+     1.075
+    ],
+    [
+     "tham-dinh-thu-nhap#5",
+     0.876
+    ],
+    [
+     "han-muc-lai-suat#1",
+     0.835
+    ],
+    [
+     "han-muc-lai-suat#3",
+     0.69
+    ]
+   ],
+   "gold": [
+    "han-muc-lai-suat#1"
+   ],
+   "rank": 3,
+   "facts_ok": true,
+   "cites_gold": true,
+   "cost_usd": 0.00015,
+   "seconds": 2.33
+  },
+  {
+   "id": "q09",
+   "question": "Khách có lương 20 triệu một tháng thì vay được tối đa bao nhiêu theo thu nhập?",
+   "in_scope": true,
+   "answerable": true,
+   "answer": "Theo quy định, số tiền vay không vượt quá 12 lần thu nhập ròng hằng tháng, nên với thu nhập ròng 20.000.000 đồng/tháng, khách có thể vay tối đa 240.000.000 đồng (trong giới hạn 10.000.000 đến 500.000.000 đồng). Lưu ý: nếu khoản vay trên 200.000.000 đồng, khách phải bổ sung sao kê tài khoản nhận lương 3 tháng gần nhất và thu nhập ghi nhận là mức thấp nhất của 3 tháng. Cần đảm bảo 20 triệu là thu nhập ròng (sau thuế và bảo hiểm).",
+   "citations": [
+    "han-muc-lai-suat#1",
+    "tham-dinh-thu-nhap#5"
+   ],
+   "retrieved": [
+    [
+     "dieu-kien-vay#3",
+     1.021
+    ],
+    [
+     "tham-dinh-thu-nhap#5",
+     0.885
+    ],
+    [
+     "han-muc-lai-suat#1",
+     0.84
+    ],
+    [
+     "han-muc-lai-suat#3",
+     0.789
+    ]
+   ],
+   "gold": [
+    "han-muc-lai-suat#1"
+   ],
+   "rank": 3,
+   "facts_ok": true,
+   "cites_gold": true,
+   "cost_usd": 0.00033,
+   "seconds": 3.36
+  },
+  {
+   "id": "q10",
+   "question": "Có thể chọn kỳ hạn 10 tháng không?",
+   "in_scope": true,
+   "answerable": true,
+   "answer": "Không. Kỳ hạn vay từ 6 tháng đến 60 tháng, chọn theo bội số của 6 tháng, nên kỳ hạn 10 tháng không được chấp nhận.",
+   "citations": [
+    "han-muc-lai-suat#2"
+   ],
+   "retrieved": [
+    [
+     "han-muc-lai-suat#2",
+     0.883
+    ],
+    [
+     "han-muc-lai-suat#4",
+     0.655
+    ],
+    [
+     "dieu-kien-vay#4",
+     0.648
+    ],
+    [
+     "han-muc-lai-suat#1",
+     0.584
+    ]
+   ],
+   "gold": [
+    "han-muc-lai-suat#2"
+   ],
+   "rank": 1,
+   "facts_ok": true,
+   "cites_gold": true,
+   "cost_usd": 0.00015,
+   "seconds": 2.28
+  },
+  {
+   "id": "q11",
+   "question": "Lãi suất sản phẩm là cố định hay thả nổi, bao nhiêu phần trăm một năm?",
+   "in_scope": true,
+   "answerable": true,
+   "answer": "Lãi suất cố định 18%/năm trong suốt thời hạn vay, tính trên dư nợ giảm dần.",
+   "citations": [
+    "han-muc-lai-suat#3"
+   ],
+   "retrieved": [
+    [
+     "han-muc-lai-suat#3",
+     0.805
+    ],
+    [
+     "dieu-kien-vay#1",
+     0.634
+    ],
+    [
+     "han-muc-lai-suat#1",
+     0.631
+    ],
+    [
+     "han-muc-lai-suat#2",
+     0.528
+    ]
+   ],
+   "gold": [
+    "han-muc-lai-suat#3"
+   ],
+   "rank": 1,
+   "facts_ok": true,
+   "cites_gold": true,
+   "cost_usd": 0.00014,
+   "seconds": 2.34
+  },
+  {
+   "id": "q12",
+   "question": "Tất toán ở tháng thứ 8 thì mất phí bao nhiêu?",
+   "in_scope": true,
+   "answerable": true,
+   "answer": "Nếu tất toán trong 12 tháng đầu, phí trả nợ trước hạn bằng 3% số tiền gốc trả trước. Tháng thứ 8 nằm trong 12 tháng đầu nên phí là 3% số tiền gốc trả trước. Lưu ý: không thu phí nếu khoản vay còn dưới 3 kỳ trả nợ.",
+   "citations": [
+    "han-muc-lai-suat#4"
+   ],
+   "retrieved": [
+    [
+     "han-muc-lai-suat#4",
+     0.902
+    ],
+    [
+     "dieu-kien-vay#3",
+     0.661
+    ],
+    [
+     "han-muc-lai-suat#2",
+     0.633
+    ],
+    [
+     "han-muc-lai-suat#1",
+     0.559
+    ]
+   ],
+   "gold": [
+    "han-muc-lai-suat#4"
+   ],
+   "rank": 1,
+   "facts_ok": true,
+   "cites_gold": true,
+   "cost_usd": 0.00018,
+   "seconds": 2.44
+  },
+  {
+   "id": "q13",
+   "question": "Trả nợ trước hạn sau 2 năm thì phí là bao nhiêu?",
+   "in_scope": true,
+   "answerable": true,
+   "answer": "Theo chính sách, phí trả nợ trước hạn là 3% số tiền gốc trả trước nếu tất toán trong 12 tháng đầu và 1% nếu tất toán từ tháng thứ 13 trở đi. Vì vậy, tất toán sau 2 năm (từ tháng thứ 13 trở đi) thì phí là 1% số tiền gốc trả trước. Không thu phí nếu khoản vay còn dưới 3 kỳ trả nợ.",
+   "citations": [
+    "han-muc-lai-suat#4"
+   ],
+   "retrieved": [
+    [
+     "han-muc-lai-suat#4",
+     1.03
+    ],
+    [
+     "han-muc-lai-suat#3",
+     0.889
+    ],
+    [
+     "tham-dinh-thu-nhap#5",
+     0.783
+    ],
+    [
+     "bao-ve-du-lieu#4",
+     0.752
+    ]
+   ],
+   "gold": [
+    "han-muc-lai-suat#4"
+   ],
+   "rank": 1,
+   "facts_ok": true,
+   "cites_gold": true,
+   "cost_usd": 0.00021,
+   "seconds": 2.72
+  },
+  {
+   "id": "q14",
+   "question": "Nếu khách trả chậm thì bị tính lãi như thế nào?",
+   "in_scope": true,
+   "answerable": true,
+   "answer": "Số tiền gốc chậm trả chịu lãi bằng 150% lãi suất trong hạn, tính trên số ngày chậm trả. Ngân hàng nhắc nợ qua tin nhắn từ ngày đầu tiên quá hạn.",
+   "citations": [
+    "han-muc-lai-suat#5"
+   ],
+   "retrieved": [
+    [
+     "han-muc-lai-suat#5",
+     1.001
+    ],
+    [
+     "han-muc-lai-suat#3",
+     0.79
+    ],
+    [
+     "han-muc-lai-suat#4",
+     0.698
+    ],
+    [
+     "tham-dinh-thu-nhap#5",
+     0.601
+    ]
+   ],
+   "gold": [
+    "han-muc-lai-suat#5"
+   ],
+   "rank": 1,
+   "facts_ok": true,
+   "cites_gold": true,
+   "cost_usd": 0.00017,
+   "seconds": 2.34
+  },
+  {
+   "id": "q15",
+   "question": "Khách có phải đóng phí hồ sơ hay mua bảo hiểm không?",
+   "in_scope": true,
+   "answerable": true,
+   "answer": "Không. Theo chính sách, ngân hàng không thu phí hồ sơ và phí thẩm định, và khách hàng không phải mua bảo hiểm để được giải ngân.",
+   "citations": [
+    "han-muc-lai-suat#6"
+   ],
+   "retrieved": [
+    [
+     "han-muc-lai-suat#6",
+     0.944
+    ],
+    [
+     "dieu-kien-vay#6",
+     0.557
+    ],
+    [
+     "bao-ve-du-lieu#5",
+     0.54
+    ],
+    [
+     "dieu-kien-vay#3",
+     0.526
+    ]
+   ],
+   "gold": [
+    "han-muc-lai-suat#6"
+   ],
+   "rank": 1,
+   "facts_ok": true,
+   "cites_gold": true,
+   "cost_usd": 0.00016,
+   "seconds": 2.17
+  },
+  {
+   "id": "q16",
+   "question": "Tiền thưởng Tết có được cộng vào thu nhập khi xét vay không?",
+   "in_scope": true,
+   "answerable": true,
+   "answer": "Không. Chỉ ghi nhận thu nhập ròng thể hiện trên phiếu lương do đơn vị sử dụng lao động phát hành. Khoản thưởng không thường xuyên, phụ cấp một lần và thu nhập không có chứng từ không được tính vào thu nhập. Tiền thưởng Tết thường là khoản thưởng không thường xuyên nên không được cộng vào thu nhập, trừ khi được thể hiện trên phiếu lương và thuộc loại thu nhập thường xuyên.",
+   "citations": [
+    "tham-dinh-thu-nhap#1"
+   ],
+   "retrieved": [
+    [
+     "tham-dinh-thu-nhap#1",
+     0.911
+    ],
+    [
+     "tham-dinh-thu-nhap#2",
+     0.779
+    ],
+    [
+     "tham-dinh-thu-nhap#3",
+     0.748
+    ],
+    [
+     "han-muc-lai-suat#1",
+     0.729
+    ]
+   ],
+   "gold": [
+    "tham-dinh-thu-nhap#1"
+   ],
+   "rank": 1,
+   "facts_ok": true,
+   "cites_gold": true,
+   "cost_usd": 0.00023,
+   "seconds": 2.67
+  },
+  {
+   "id": "q17",
+   "question": "Khách khai thu nhập cao hơn phiếu lương thì xử lý ra sao?",
+   "in_scope": true,
+   "answerable": true,
+   "answer": "Nếu thu nhập kê khai trên đơn đề nghị vay cao hơn phiếu lương quá 10%, hồ sơ được chuyển thẩm định viên xem xét và thu nhập được tính theo phiếu lương.",
+   "citations": [
+    "tham-dinh-thu-nhap#2"
+   ],
+   "retrieved": [
+    [
+     "tham-dinh-thu-nhap#2",
+     0.971
+    ],
+    [
+     "tham-dinh-thu-nhap#1",
+     0.724
+    ],
+    [
+     "dieu-kien-vay#3",
+     0.58
+    ],
+    [
+     "tham-dinh-thu-nhap#5",
+     0.575
+    ]
+   ],
+   "gold": [
+    "tham-dinh-thu-nhap#2"
+   ],
+   "rank": 1,
+   "facts_ok": true,
+   "cites_gold": true,
+   "cost_usd": 0.00017,
+   "seconds": 1.92
+  },
+  {
+   "id": "q18",
+   "question": "Tỷ lệ nợ trên thu nhập tối đa là bao nhiêu và tính thế nào?",
+   "in_scope": true,
+   "answerable": true,
+   "answer": "Tỷ lệ nợ trên thu nhập (DTI) không được vượt quá 50%. DTI được tính bằng tổng nghĩa vụ trả nợ hằng tháng hiện có cộng khoản trả góp dự kiến của khoản vay mới, chia cho thu nhập ròng hằng tháng. Nghĩa vụ trả nợ hiện có gồm khoản trả góp của các khoản vay và 5% hạn mức thẻ tín dụng đang sử dụng.",
+   "citations": [
+    "tham-dinh-thu-nhap#3"
+   ],
+   "retrieved": [
+    [
+     "tham-dinh-thu-nhap#3",
+     1.017
+    ],
+    [
+     "tham-dinh-thu-nhap#5",
+     0.87
+    ],
+    [
+     "dieu-kien-vay#3",
+     0.869
+    ],
+    [
+     "han-muc-lai-suat#3",
+     0.795
+    ]
+   ],
+   "gold": [
+    "tham-dinh-thu-nhap#3"
+   ],
+   "rank": 1,
+   "facts_ok": true,
+   "cites_gold": true,
+   "cost_usd": 0.00022,
+   "seconds": 2.49
+  },
+  {
+   "id": "q19",
+   "question": "Thẻ tín dụng của khách được tính vào nghĩa vụ trả nợ như thế nào?",
+   "in_scope": true,
+   "answerable": true,
+   "answer": "Nghĩa vụ trả nợ hiện có gồm khoản trả góp của các khoản vay và 5% hạn mức thẻ tín dụng đang sử dụng. Tức là hạn mức thẻ tín dụng đang sử dụng được tính 5% vào tổng nghĩa vụ trả nợ hằng tháng khi tính tỷ lệ DTI (không vượt quá 50%).",
+   "citations": [
+    "tham-dinh-thu-nhap#3"
+   ],
+   "retrieved": [
+    [
+     "tham-dinh-thu-nhap#3",
+     0.908
+    ],
+    [
+     "dieu-kien-vay#5",
+     0.773
+    ],
+    [
+     "dieu-kien-vay#6",
+     0.771
+    ],
+    [
+     "quy-trinh-xu-ly#5",
+     0.741
+    ]
+   ],
+   "gold": [
+    "tham-dinh-thu-nhap#3"
+   ],
+   "rank": 1,
+   "facts_ok": true,
+   "cites_gold": true,
+   "cost_usd": 0.0002,
+   "seconds": 2.5
+  },
+  {
+   "id": "q20",
+   "question": "Hồ sơ có DTI 58% thì bị từ chối luôn phải không?",
+   "in_scope": true,
+   "answerable": true,
+   "answer": "Không. Hồ sơ có DTI trên 50% không bị từ chối tự động. Thẩm định viên đề xuất giảm số tiền vay hoặc kéo dài kỳ hạn để đưa DTI về trong ngưỡng, và ghi rõ phương án vào tờ trình.",
+   "citations": [
+    "tham-dinh-thu-nhap#4"
+   ],
+   "retrieved": [
+    [
+     "tham-dinh-thu-nhap#4",
+     0.926
+    ],
+    [
+     "tham-dinh-thu-nhap#3",
+     0.495
+    ],
+    [
+     "ho-so-yeu-cau#3",
+     0.495
+    ],
+    [
+     "bao-ve-du-lieu#2",
+     0.476
+    ]
+   ],
+   "gold": [
+    "tham-dinh-thu-nhap#4"
+   ],
+   "rank": 1,
+   "facts_ok": true,
+   "cites_gold": true,
+   "cost_usd": 0.00019,
+   "seconds": 2.28
+  },
+  {
+   "id": "q21",
+   "question": "Vay 250 triệu thì cần thêm giấy tờ gì?",
+   "in_scope": true,
+   "answerable": true,
+   "answer": "Khoản vay trên 200.000.000 đồng cần thêm sao kê tài khoản nhận lương 3 tháng gần nhất và bản sao hợp đồng lao động. Ngoài ra, bộ hồ sơ bắt buộc gồm đơn đề nghị vay vốn có chữ ký của khách hàng, căn cước công dân còn hiệu lực và phiếu lương tháng gần nhất.",
+   "citations": [
+    "ho-so-yeu-cau#2",
+    "ho-so-yeu-cau#1"
+   ],
+   "retrieved": [
+    [
+     "ho-so-yeu-cau#2",
+     0.827
+    ],
+    [
+     "ho-so-yeu-cau#1",
+     0.617
+    ],
+    [
+     "quy-trinh-xu-ly#2",
+     0.604
+    ],
+    [
+     "bao-ve-du-lieu#2",
+     0.589
+    ]
+   ],
+   "gold": [
+    "ho-so-yeu-cau#2",
+    "tham-dinh-thu-nhap#5"
+   ],
+   "rank": 1,
+   "facts_ok": true,
+   "cites_gold": true,
+   "cost_usd": 0.00021,
+   "seconds": 2.66
+  },
+  {
+   "id": "q22",
+   "question": "Bộ hồ sơ tối thiểu gồm những giấy tờ nào?",
+   "in_scope": true,
+   "answerable": true,
+   "answer": "Bộ hồ sơ tối thiểu gồm ba loại giấy tờ: đơn đề nghị vay vốn có chữ ký của khách hàng, căn cước công dân còn hiệu lực, và phiếu lương tháng gần nhất. Thiếu một trong ba loại thì hồ sơ chưa được thẩm định.",
+   "citations": [
+    "ho-so-yeu-cau#1",
+    "quy-trinh-xu-ly#2"
+   ],
+   "retrieved": [
+    [
+     "ho-so-yeu-cau#1",
+     0.925
+    ],
+    [
+     "quy-trinh-xu-ly#2",
+     0.828
+    ],
+    [
+     "ho-so-yeu-cau#4",
+     0.694
+    ],
+    [
+     "ho-so-yeu-cau#3",
+     0.658
+    ]
+   ],
+   "gold": [
+    "ho-so-yeu-cau#1"
+   ],
+   "rank": 1,
+   "facts_ok": true,
+   "cites_gold": true,
+   "cost_usd": 0.00019,
+   "seconds": 2.5
+  },
+  {
+   "id": "q23",
+   "question": "Căn cước của khách đã hết hạn tuần trước thì có nhận hồ sơ không?",
+   "in_scope": true,
+   "answerable": true,
+   "answer": "Không. Căn cước công dân đã hết hạn tại ngày nộp hồ sơ không được chấp nhận. Khách hàng cần bổ sung giấy tờ còn hiệu lực trước khi hồ sơ được thẩm định. Nếu hồ sơ thiếu giấy tờ bắt buộc, hồ sơ sẽ được trả lại cho khách hàng trong vòng 1 ngày làm việc kèm danh sách giấy tờ cần bổ sung.",
+   "citations": [
+    "ho-so-yeu-cau#4",
+    "quy-trinh-xu-ly#2"
+   ],
+   "retrieved": [
+    [
+     "ho-so-yeu-cau#4",
+     0.827
+    ],
+    [
+     "bao-ve-du-lieu#4",
+     0.544
+    ],
+    [
+     "han-muc-lai-suat#4",
+     0.543
+    ],
+    [
+     "quy-trinh-xu-ly#2",
+     0.537
+    ]
+   ],
+   "gold": [
+    "ho-so-yeu-cau#4"
+   ],
+   "rank": 1,
+   "facts_ok": true,
+   "cites_gold": true,
+   "cost_usd": 0.00022,
+   "seconds": 2.98
+  },
+  {
+   "id": "q24",
+   "question": "Tên trên phiếu lương khác tên trên căn cước thì làm gì?",
+   "in_scope": true,
+   "answerable": true,
+   "answer": "Tên người lao động trên phiếu lương phải trùng với chủ thẻ căn cước. Mọi điểm không khớp đều được chuyển thẩm định viên xem xét.",
+   "citations": [
+    "ho-so-yeu-cau#5"
+   ],
+   "retrieved": [
+    [
+     "ho-so-yeu-cau#5",
+     0.85
+    ],
+    [
+     "ho-so-yeu-cau#1",
+     0.57
+    ],
+    [
+     "tham-dinh-thu-nhap#2",
+     0.566
+    ],
+    [
+     "tham-dinh-thu-nhap#1",
+     0.535
+    ]
+   ],
+   "gold": [
+    "ho-so-yeu-cau#5"
+   ],
+   "rank": 1,
+   "facts_ok": true,
+   "cites_gold": true,
+   "cost_usd": 0.00016,
+   "seconds": 2.17
+  },
+  {
+   "id": "q25",
+   "question": "Hồ sơ vào hàng chờ thẩm định viên thì phải xử lý trong bao lâu?",
+   "in_scope": true,
+   "answerable": true,
+   "answer": "Hồ sơ có cảnh báo từ bước kiểm tra tự động được chuyển vào hàng chờ của thẩm định viên và phải được thẩm định viên xử lý trong vòng 4 giờ làm việc kể từ khi hồ sơ vào hàng chờ.",
+   "citations": [
+    "quy-trinh-xu-ly#3"
+   ],
+   "retrieved": [
+    [
+     "quy-trinh-xu-ly#3",
+     1.072
+    ],
+    [
+     "bao-ve-du-lieu#5",
+     0.698
+    ],
+    [
+     "quy-trinh-xu-ly#2",
+     0.691
+    ],
+    [
+     "quy-trinh-xu-ly#5",
+     0.681
+    ]
+   ],
+   "gold": [
+    "quy-trinh-xu-ly#3"
+   ],
+   "rank": 1,
+   "facts_ok": true,
+   "cites_gold": true,
+   "cost_usd": 0.00018,
+   "seconds": 2.44
+  },
+  {
+   "id": "q26",
+   "question": "Khoản vay 150 triệu do cấp nào phê duyệt?",
+   "in_scope": true,
+   "answerable": true,
+   "answer": "Khoản vay 150 triệu đồng (trên 100.000.000 đồng đến 300.000.000 đồng) do trưởng phòng thẩm định phê duyệt.",
+   "citations": [
+    "quy-trinh-xu-ly#4"
+   ],
+   "retrieved": [
+    [
+     "quy-trinh-xu-ly#4",
+     1.035
+    ],
+    [
+     "ho-so-yeu-cau#2",
+     0.682
+    ],
+    [
+     "han-muc-lai-suat#1",
+     0.651
+    ],
+    [
+     "tham-dinh-thu-nhap#5",
+     0.634
+    ]
+   ],
+   "gold": [
+    "quy-trinh-xu-ly#4"
+   ],
+   "rank": 1,
+   "facts_ok": true,
+   "cites_gold": true,
+   "cost_usd": 0.00015,
+   "seconds": 2.19
+  },
+  {
+   "id": "q27",
+   "question": "Sau khi ký hợp đồng bao lâu thì khách nhận được tiền?",
+   "in_scope": true,
+   "answerable": true,
+   "answer": "Tiền được giải ngân vào tài khoản nhận lương của khách hàng trong vòng 1 ngày làm việc sau khi khách hàng ký hợp đồng tín dụng.",
+   "citations": [
+    "quy-trinh-xu-ly#5"
+   ],
+   "retrieved": [
+    [
+     "quy-trinh-xu-ly#5",
+     1.011
+    ],
+    [
+     "bao-ve-du-lieu#4",
+     0.79
+    ],
+    [
+     "han-muc-lai-suat#4",
+     0.717
+    ],
+    [
+     "dieu-kien-vay#4",
+     0.702
+    ]
+   ],
+   "gold": [
+    "quy-trinh-xu-ly#5"
+   ],
+   "rank": 1,
+   "facts_ok": true,
+   "cites_gold": true,
+   "cost_usd": 0.00016,
+   "seconds": 2.3
+  },
+  {
+   "id": "q28",
+   "question": "Hệ thống tự động có được quyết định cho vay hay từ chối không?",
+   "in_scope": true,
+   "answerable": true,
+   "answer": "Không. Mô hình máy học chỉ được dùng để phân loại giấy tờ và đọc thông tin; mô hình không đưa ra quyết định cấp hay từ chối tín dụng. Mọi quyết định tín dụng do người có thẩm quyền đưa ra và được ghi nhận trên hệ thống. Kết quả kiểm tra tự động cũng không phải là quyết định tín dụng.",
+   "citations": [
+    "bao-ve-du-lieu#3",
+    "quy-trinh-xu-ly#1"
+   ],
+   "retrieved": [
+    [
+     "bao-ve-du-lieu#3",
+     0.847
+    ],
+    [
+     "tham-dinh-thu-nhap#4",
+     0.661
+    ],
+    [
+     "quy-trinh-xu-ly#1",
+     0.645
+    ],
+    [
+     "bao-ve-du-lieu#5",
+     0.588
+    ]
+   ],
+   "gold": [
+    "bao-ve-du-lieu#3",
+    "quy-trinh-xu-ly#1"
+   ],
+   "rank": 1,
+   "facts_ok": true,
+   "cites_gold": true,
+   "cost_usd": 0.00022,
+   "seconds": 2.45
+  },
+  {
+   "id": "q29",
+   "question": "Hồ sơ bị trả lại thì ngân hàng giữ dữ liệu bao lâu?",
+   "in_scope": true,
+   "answerable": true,
+   "answer": "Hồ sơ bị trả lại hoặc khách hàng không ký hợp đồng được lưu trữ 2 năm kể từ ngày tiếp nhận, sau đó được xóa.",
+   "citations": [
+    "bao-ve-du-lieu#4"
+   ],
+   "retrieved": [
+    [
+     "bao-ve-du-lieu#4",
+     1.067
+    ],
+    [
+     "bao-ve-du-lieu#5",
+     0.801
+    ],
+    [
+     "bao-ve-du-lieu#2",
+     0.722
+    ],
+    [
+     "han-muc-lai-suat#5",
+     0.72
+    ]
+   ],
+   "gold": [
+    "bao-ve-du-lieu#4"
+   ],
+   "rank": 1,
+   "facts_ok": true,
+   "cites_gold": true,
+   "cost_usd": 0.00017,
+   "seconds": 2.39
+  },
+  {
+   "id": "q30",
+   "question": "Trên màn hình danh sách hồ sơ, số căn cước được hiển thị như thế nào?",
+   "in_scope": true,
+   "answerable": true,
+   "answer": "Trên màn hình danh sách, số căn cước công dân chỉ hiển thị 3 chữ số đầu và 3 chữ số cuối. Bản đầy đủ chỉ hiển thị trong màn hình chi tiết hồ sơ cho người được phân công xử lý.",
+   "citations": [
+    "bao-ve-du-lieu#2"
+   ],
+   "retrieved": [
+    [
+     "bao-ve-du-lieu#2",
+     0.966
+    ],
+    [
+     "ho-so-yeu-cau#3",
+     0.507
+    ],
+    [
+     "ho-so-yeu-cau#5",
+     0.457
+    ],
+    [
+     "quy-trinh-xu-ly#2",
+     0.448
+    ]
+   ],
+   "gold": [
+    "bao-ve-du-lieu#2"
+   ],
+   "rank": 1,
+   "facts_ok": true,
+   "cites_gold": true,
+   "cost_usd": 0.00018,
+   "seconds": 2.45
+  },
+  {
+   "id": "o01",
+   "question": "Lãi suất vay mua nhà hiện nay là bao nhiêu?",
+   "in_scope": false,
+   "answerable": false,
+   "answer": "Chính sách không đề cập đến lãi suất vay mua nhà. Chính sách chỉ quy định lãi suất cố định 18%/năm cho sản phẩm vay tiêu dùng này.",
+   "citations": [],
+   "retrieved": [
+    [
+     "han-muc-lai-suat#3",
+     0.843
+    ],
+    [
+     "han-muc-lai-suat#1",
+     0.825
+    ],
+    [
+     "tham-dinh-thu-nhap#5",
+     0.73
+    ],
+    [
+     "han-muc-lai-suat#2",
+     0.703
+    ]
+   ],
+   "gold": [],
+   "rank": null,
+   "facts_ok": false,
+   "cites_gold": false,
+   "cost_usd": 0.00015,
+   "seconds": 2.22
+  },
+  {
+   "id": "o02",
+   "question": "Phí thường niên của thẻ tín dụng là bao nhiêu?",
+   "in_scope": false,
+   "answerable": false,
+   "answer": "Chính sách được cung cấp không quy định phí thường niên của thẻ tín dụng nên không thể trả lời câu hỏi này.",
+   "citations": [],
+   "retrieved": [
+    [
+     "tham-dinh-thu-nhap#3",
+     0.773
+    ],
+    [
+     "dieu-kien-vay#3",
+     0.683
+    ],
+    [
+     "han-muc-lai-suat#1",
+     0.681
+    ],
+    [
+     "han-muc-lai-suat#4",
+     0.673
+    ]
+   ],
+   "gold": [],
+   "rank": null,
+   "facts_ok": false,
+   "cites_gold": false,
+   "cost_usd": 0.00015,
+   "seconds": 1.74
+  },
+  {
+   "id": "o03",
+   "question": "Chi nhánh có làm việc vào sáng thứ bảy không?",
+   "in_scope": false,
+   "answerable": false,
+   "answer": "Chính sách được cung cấp không có thông tin về giờ làm việc của chi nhánh vào sáng thứ Bảy.",
+   "citations": [],
+   "retrieved": [
+    [
+     "dieu-kien-vay#4",
+     0.555
+    ],
+    [
+     "quy-trinh-xu-ly#5",
+     0.515
+    ],
+    [
+     "quy-trinh-xu-ly#3",
+     0.482
+    ],
+    [
+     "tham-dinh-thu-nhap#1",
+     0.395
+    ]
+   ],
+   "gold": [],
+   "rank": null,
+   "facts_ok": false,
+   "cites_gold": false,
+   "cost_usd": 0.00014,
+   "seconds": 2.25
+  },
+  {
+   "id": "o04",
+   "question": "Lãi suất tiết kiệm kỳ hạn 12 tháng là bao nhiêu?",
+   "in_scope": false,
+   "answerable": false,
+   "answer": "Chính sách không đề cập đến lãi suất tiết kiệm kỳ hạn 12 tháng. Các mục được cung cấp chỉ quy định về sản phẩm vay tiêu dùng, bao gồm hạn mức, kỳ hạn vay, lãi suất vay 18%/năm và phí trả nợ trước hạn.",
+   "citations": [],
+   "retrieved": [
+    [
+     "han-muc-lai-suat#2",
+     0.936
+    ],
+    [
+     "han-muc-lai-suat#4",
+     0.882
+    ],
+    [
+     "han-muc-lai-suat#1",
+     0.851
+    ],
+    [
+     "han-muc-lai-suat#3",
+     0.826
+    ]
+   ],
+   "gold": [],
+   "rank": null,
+   "facts_ok": false,
+   "cites_gold": false,
+   "cost_usd": 0.00018,
+   "seconds": 2.61
+  },
+  {
+   "id": "o05",
+   "question": "Tỷ giá USD hôm nay là bao nhiêu?",
+   "in_scope": false,
+   "answerable": false,
+   "answer": "Chính sách được cung cấp không có thông tin về tỷ giá USD, nên không thể trả lời câu hỏi này.",
+   "citations": [],
+   "retrieved": [
+    [
+     "tham-dinh-thu-nhap#3",
+     0.548
+    ],
+    [
+     "dieu-kien-vay#1",
+     0.535
+    ],
+    [
+     "han-muc-lai-suat#1",
+     0.417
+    ],
+    [
+     "han-muc-lai-suat#4",
+     0.381
+    ]
+   ],
+   "gold": [],
+   "rank": null,
+   "facts_ok": false,
+   "cites_gold": false,
+   "cost_usd": 0.00015,
+   "seconds": 2.14
+  },
+  {
+   "id": "o06",
+   "question": "Khách quên mật khẩu ngân hàng điện tử thì làm thế nào?",
+   "in_scope": false,
+   "answerable": false,
+   "answer": "Chính sách được cung cấp không có nội dung về cách xử lý khi khách hàng quên mật khẩu ngân hàng điện tử.",
+   "citations": [],
+   "retrieved": [
+    [
+     "bao-ve-du-lieu#2",
+     0.69
+    ],
+    [
+     "bao-ve-du-lieu#4",
+     0.653
+    ],
+    [
+     "dieu-kien-vay#1",
+     0.647
+    ],
+    [
+     "quy-trinh-xu-ly#5",
+     0.637
+    ]
+   ],
+   "gold": [],
+   "rank": null,
+   "facts_ok": false,
+   "cites_gold": false,
+   "cost_usd": 0.00015,
+   "seconds": 2.51
+  }
+ ],
+ "summary": {
+  "questions": 36,
+  "in_scope": 30,
+  "out_of_scope": 6,
+  "hit_at_1_pct": 93.3,
+  "hit_at_k_pct": 100.0,
+  "mrr": 0.956,
+  "key_fact_accuracy_pct": 100.0,
+  "citation_accuracy_pct": 100.0,
+  "false_refusal_pct": 0.0,
+  "correct_refusal_pct": 100.0,
+  "cost_per_question_usd": 0.00018,
+  "latency_p50_s": 2.43,
+  "latency_p95_s": 2.72,
+  "total_cost_usd": 0.0065
+ }
+}

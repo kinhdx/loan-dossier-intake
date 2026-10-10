@@ -1,0 +1,58 @@
+{
+  "as_of": "2026-10-01",
+  "defect": "AGE_OUT_OF_RANGE",
+  "expected_findings": [
+    "AGE_OUT_OF_RANGE"
+  ],
+  "expected_decision": "needs_review",
+  "salary": {
+    "gross": 32600000,
+    "basic": 27700000,
+    "allowance": 4900000,
+    "insurance": 3423000,
+    "tax": 909000,
+    "net": 28268000
+  },
+  "province": "TP. Hồ Chí Minh",
+  "style": {
+    "form": "lines",
+    "payslip": "table",
+    "form_scanned": false
+  },
+  "documents": {
+    "don-de-nghi-vay.pdf": {
+      "doc_type": "application_form",
+      "fields": {
+        "full_name": "Trần Thùy Mai",
+        "date_of_birth": "19/2/1967",
+        "id_number": "079167393333",
+        "phone": "0951359815",
+        "employer": "Công ty TNHH Điện tử Minh Quang",
+        "declared_monthly_income": "28.268.000 đồng",
+        "existing_monthly_debt": "0 đồng",
+        "requested_amount": "51.000.000 đồng",
+        "term_months": "60 tháng"
+      }
+    },
+    "cccd.pdf": {
+      "doc_type": "national_id",
+      "fields": {
+        "full_name": "TRẦN THÙY MAI",
+        "date_of_birth": "19/02/1967",
+        "id_number": "079167393333",
+        "sex": "Nữ",
+        "expiry_date": "19/02/2027"
+      }
+    },
+    "phieu-luong.pdf": {
+      "doc_type": "payslip",
+      "fields": {
+        "employee_name": "Trần Thùy Mai",
+        "employer": "CÔNG TY TNHH ĐIỆN TỬ MINH QUANG",
+        "pay_period": "09/2026",
+        "gross_income": "32.600.000 đồng",
+        "net_income": "28.268.000 đồng"
+      }
+    }
+  }
+}

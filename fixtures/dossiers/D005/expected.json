@@ -1,0 +1,56 @@
+{
+  "as_of": "2026-10-01",
+  "defect": "clean",
+  "expected_findings": [],
+  "expected_decision": "ready_for_underwriting",
+  "salary": {
+    "gross": 36600000,
+    "basic": 31100000,
+    "allowance": 5500000,
+    "insurance": 3843000,
+    "tax": 1088000,
+    "net": 31669000
+  },
+  "province": "TP. Hồ Chí Minh",
+  "style": {
+    "form": "lines",
+    "payslip": "lines",
+    "form_scanned": false
+  },
+  "documents": {
+    "don-de-nghi-vay.pdf": {
+      "doc_type": "application_form",
+      "fields": {
+        "full_name": "Ngô Quang Long",
+        "date_of_birth": "10/09/2000",
+        "id_number": "079200781768",
+        "phone": "0946032244",
+        "employer": "Công ty TNHH Phần mềm Sao Mai",
+        "declared_monthly_income": "32 triệu đồng",
+        "existing_monthly_debt": "2.000.000 đồng",
+        "requested_amount": "240 triệu đồng",
+        "term_months": "48 tháng"
+      }
+    },
+    "cccd.pdf": {
+      "doc_type": "national_id",
+      "fields": {
+        "full_name": "NGÔ QUANG LONG",
+        "date_of_birth": "10/09/2000",
+        "id_number": "079200781768",
+        "sex": "Nam",
+        "expiry_date": "10/09/2040"
+      }
+    },
+    "phieu-luong.pdf": {
+      "doc_type": "payslip",
+      "fields": {
+        "employee_name": "Ngô Quang Long",
+        "employer": "CÔNG TY TNHH PHẦN MỀM SAO MAI",
+        "pay_period": "09/2026",
+        "gross_income": "36.600.000 đồng",
+        "net_income": "31.669.000 đồng"
+      }
+    }
+  }
+}

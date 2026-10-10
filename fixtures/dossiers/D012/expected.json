@@ -1,0 +1,58 @@
+{
+  "as_of": "2026-10-01",
+  "defect": "ID_EXPIRED",
+  "expected_findings": [
+    "ID_EXPIRED"
+  ],
+  "expected_decision": "needs_review",
+  "salary": {
+    "gross": 22100000,
+    "basic": 18800000,
+    "allowance": 3300000,
+    "insurance": 2320000,
+    "tax": 439000,
+    "net": 19341000
+  },
+  "province": "TP. Hồ Chí Minh",
+  "style": {
+    "form": "lines",
+    "payslip": "table",
+    "form_scanned": false
+  },
+  "documents": {
+    "don-de-nghi-vay.pdf": {
+      "doc_type": "application_form",
+      "fields": {
+        "full_name": "Hồ Minh Nam",
+        "date_of_birth": "07/07/2001",
+        "id_number": "079201434797",
+        "phone": "0965185933",
+        "employer": "Công ty CP Xây dựng Đông Á",
+        "declared_monthly_income": "19 triệu đồng",
+        "existing_monthly_debt": "0 đồng",
+        "requested_amount": "230 triệu đồng",
+        "term_months": "60 tháng"
+      }
+    },
+    "cccd.pdf": {
+      "doc_type": "national_id",
+      "fields": {
+        "full_name": "HỒ MINH NAM",
+        "date_of_birth": "07/07/2001",
+        "id_number": "079201434797",
+        "sex": "Nam",
+        "expiry_date": "07/07/2026"
+      }
+    },
+    "phieu-luong.pdf": {
+      "doc_type": "payslip",
+      "fields": {
+        "employee_name": "Hồ Minh Nam",
+        "employer": "CÔNG TY CP XÂY DỰNG ĐÔNG Á",
+        "pay_period": "09/2026",
+        "gross_income": "22.100.000 đồng",
+        "net_income": "19.341.000 đồng"
+      }
+    }
+  }
+}

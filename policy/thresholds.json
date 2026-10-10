@@ -1,0 +1,13 @@
+{
+  "min_age": 20,
+  "max_age_at_maturity": 60,
+  "min_net_income": 8000000,
+  "max_dti": 0.5,
+  "min_amount": 10000000,
+  "max_amount": 500000000,
+  "min_term_months": 6,
+  "max_term_months": 60,
+  "annual_rate": 0.18,
+  "income_tolerance": 0.1,
+  "max_income_multiple": 12
+}

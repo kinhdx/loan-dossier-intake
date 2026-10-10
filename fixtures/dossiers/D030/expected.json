@@ -1,0 +1,56 @@
+{
+  "as_of": "2026-10-01",
+  "defect": "clean",
+  "expected_findings": [],
+  "expected_decision": "ready_for_underwriting",
+  "salary": {
+    "gross": 39500000,
+    "basic": 33600000,
+    "allowance": 5900000,
+    "insurance": 4148000,
+    "tax": 1218000,
+    "net": 34134000
+  },
+  "province": "Bắc Giang",
+  "style": {
+    "form": "table",
+    "payslip": "lines",
+    "form_scanned": false
+  },
+  "documents": {
+    "don-de-nghi-vay.pdf": {
+      "doc_type": "application_form",
+      "fields": {
+        "full_name": "Lê Đức Quân",
+        "date_of_birth": "02/05/1989",
+        "id_number": "024089659159",
+        "phone": "0934302872",
+        "employer": "Công ty TNHH Điện tử Minh Quang",
+        "declared_monthly_income": "34 triệu đồng",
+        "existing_monthly_debt": "0 đồng",
+        "requested_amount": "263 triệu đồng",
+        "term_months": "2 năm"
+      }
+    },
+    "cccd.pdf": {
+      "doc_type": "national_id",
+      "fields": {
+        "full_name": "LÊ ĐỨC QUÂN",
+        "date_of_birth": "02/05/1989",
+        "id_number": "024089659159",
+        "sex": "Nam",
+        "expiry_date": "02/05/2029"
+      }
+    },
+    "phieu-luong.pdf": {
+      "doc_type": "payslip",
+      "fields": {
+        "employee_name": "Lê Đức Quân",
+        "employer": "CÔNG TY TNHH ĐIỆN TỬ MINH QUANG",
+        "pay_period": "09/2026",
+        "gross_income": "39.500.000 đồng",
+        "net_income": "34.134.000 đồng"
+      }
+    }
+  }
+}

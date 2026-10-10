@@ -1,0 +1,56 @@
+{
+  "as_of": "2026-10-01",
+  "defect": "clean",
+  "expected_findings": [],
+  "expected_decision": "ready_for_underwriting",
+  "salary": {
+    "gross": 18600000,
+    "basic": 15800000,
+    "allowance": 2800000,
+    "insurance": 1953000,
+    "tax": 282000,
+    "net": 16365000
+  },
+  "province": "Bắc Giang",
+  "style": {
+    "form": "lines",
+    "payslip": "lines",
+    "form_scanned": false
+  },
+  "documents": {
+    "don-de-nghi-vay.pdf": {
+      "doc_type": "application_form",
+      "fields": {
+        "full_name": "Vũ Quang Tuấn",
+        "date_of_birth": "27/08/1996",
+        "id_number": "024096489195",
+        "phone": "0978574882",
+        "employer": "Công ty CP Dược phẩm Bình An",
+        "declared_monthly_income": "16.365.000 đồng",
+        "existing_monthly_debt": "1.500.000 đồng",
+        "requested_amount": "186.000.000 đồng",
+        "term_months": "48 tháng"
+      }
+    },
+    "cccd.pdf": {
+      "doc_type": "national_id",
+      "fields": {
+        "full_name": "VŨ QUANG TUẤN",
+        "date_of_birth": "27/08/1996",
+        "id_number": "024096489195",
+        "sex": "Nam",
+        "expiry_date": "27/08/2036"
+      }
+    },
+    "phieu-luong.pdf": {
+      "doc_type": "payslip",
+      "fields": {
+        "employee_name": "Vũ Quang Tuấn",
+        "employer": "CÔNG TY CP DƯỢC PHẨM BÌNH AN",
+        "pay_period": "09/2026",
+        "gross_income": "18.600.000 đồng",
+        "net_income": "16.365.000 đồng"
+      }
+    }
+  }
+}

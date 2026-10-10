@@ -1,0 +1,29 @@
+name: eval
+
+# Runs against the model API and spends money, so it is started by hand rather than on every push.
+on:
+  workflow_dispatch:
+    inputs:
+      model:
+        description: Extraction and answer model
+        default: claude-opus-5-5
+      suite:
+        description: idp, rag or retrieval
+        default: idp
+
+jobs:
+  eval:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: "3.12"
+      - run: uv sync --locked
+      - run: uv run intake eval ${{ inputs.suite }} --model ${{ inputs.model }}
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: eval-report
+          path: reports/

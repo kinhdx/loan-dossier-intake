@@ -1,0 +1,56 @@
+{
+  "as_of": "2026-10-01",
+  "defect": "clean",
+  "expected_findings": [],
+  "expected_decision": "ready_for_underwriting",
+  "salary": {
+    "gross": 40700000,
+    "basic": 34600000,
+    "allowance": 6100000,
+    "insurance": 4274000,
+    "tax": 1271000,
+    "net": 35155000
+  },
+  "province": "Hải Phòng",
+  "style": {
+    "form": "lines",
+    "payslip": "lines",
+    "form_scanned": false
+  },
+  "documents": {
+    "don-de-nghi-vay.pdf": {
+      "doc_type": "application_form",
+      "fields": {
+        "full_name": "Bùi Đức Khoa",
+        "date_of_birth": "25/3/2000",
+        "id_number": "031200084273",
+        "phone": "0919405711",
+        "employer": "Công ty CP Dược phẩm Bình An",
+        "declared_monthly_income": "35.155.000 đồng",
+        "existing_monthly_debt": "1.500.000 đồng",
+        "requested_amount": "117.000.000 đồng",
+        "term_months": "60 tháng"
+      }
+    },
+    "cccd.pdf": {
+      "doc_type": "national_id",
+      "fields": {
+        "full_name": "BÙI ĐỨC KHOA",
+        "date_of_birth": "25/03/2000",
+        "id_number": "031200084273",
+        "sex": "Nam",
+        "expiry_date": "25/03/2040"
+      }
+    },
+    "phieu-luong.pdf": {
+      "doc_type": "payslip",
+      "fields": {
+        "employee_name": "Bùi Đức Khoa",
+        "employer": "CÔNG TY CP DƯỢC PHẨM BÌNH AN",
+        "pay_period": "09/2026",
+        "gross_income": "40.700.000 đồng",
+        "net_income": "35.155.000 đồng"
+      }
+    }
+  }
+}

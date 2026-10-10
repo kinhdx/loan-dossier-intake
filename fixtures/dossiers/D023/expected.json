@@ -1,0 +1,58 @@
+{
+  "as_of": "2026-10-01",
+  "defect": "INCOME_ABOVE_PAYSLIP",
+  "expected_findings": [
+    "INCOME_ABOVE_PAYSLIP"
+  ],
+  "expected_decision": "needs_review",
+  "salary": {
+    "gross": 25000000,
+    "basic": 21200000,
+    "allowance": 3800000,
+    "insurance": 2625000,
+    "tax": 569000,
+    "net": 21806000
+  },
+  "province": "Hải Phòng",
+  "style": {
+    "form": "lines",
+    "payslip": "table",
+    "form_scanned": false
+  },
+  "documents": {
+    "don-de-nghi-vay.pdf": {
+      "doc_type": "application_form",
+      "fields": {
+        "full_name": "Lê Thanh Yến",
+        "date_of_birth": "06/08/1993",
+        "id_number": "031193243332",
+        "phone": "0936494377",
+        "employer": "Công ty TNHH Phần mềm Sao Mai",
+        "declared_monthly_income": "28 triệu đồng",
+        "existing_monthly_debt": "0 đồng",
+        "requested_amount": "141 triệu đồng",
+        "term_months": "48 tháng"
+      }
+    },
+    "cccd.pdf": {
+      "doc_type": "national_id",
+      "fields": {
+        "full_name": "LÊ THANH YẾN",
+        "date_of_birth": "06/08/1993",
+        "id_number": "031193243332",
+        "sex": "Nữ",
+        "expiry_date": "06/08/2033"
+      }
+    },
+    "phieu-luong.pdf": {
+      "doc_type": "payslip",
+      "fields": {
+        "employee_name": "Lê Thanh Yến",
+        "employer": "CÔNG TY TNHH PHẦN MỀM SAO MAI",
+        "pay_period": "09/2026",
+        "gross_income": "25.000.000 đồng",
+        "net_income": "21.806.000 đồng"
+      }
+    }
+  }
+}

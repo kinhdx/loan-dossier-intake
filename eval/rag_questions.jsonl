@@ -1,0 +1,36 @@
+{"id": "q01", "question": "Khách hàng 21 tuổi có đủ tuổi vay không? Tuổi tối thiểu là bao nhiêu?", "gold_chunks": ["dieu-kien-vay#2"], "must_include": [["20 tuổi"]]}
+{"id": "q02", "question": "Một người 57 tuổi thì được vay tối đa bao lâu?", "gold_chunks": ["dieu-kien-vay#2"], "must_include": [["36 tháng"]]}
+{"id": "q03", "question": "Lương thực nhận tối thiểu mỗi tháng để được vay là bao nhiêu?", "gold_chunks": ["dieu-kien-vay#3"], "must_include": [["8.000.000", "8 triệu"]]}
+{"id": "q04", "question": "Nhân viên mới vào công ty được 3 tháng có vay được không?", "gold_chunks": ["dieu-kien-vay#4"], "must_include": [["6 tháng"]]}
+{"id": "q05", "question": "Người tự kinh doanh có dùng được sản phẩm này không?", "gold_chunks": ["dieu-kien-vay#1"], "must_include": [["không thuộc phạm vi", "không áp dụng", "không được"]]}
+{"id": "q06", "question": "Khách từng có nợ nhóm 2 cách đây 8 tháng thì xử lý thế nào?", "gold_chunks": ["dieu-kien-vay#5"], "must_include": [["12 tháng"]]}
+{"id": "q07", "question": "Khách đang có một khoản vay tín chấp khác tại ngân hàng chưa trả xong thì có vay thêm được không?", "gold_chunks": ["dieu-kien-vay#6"], "must_include": [["chưa tất toán", "không cấp", "không được"]]}
+{"id": "q08", "question": "Số tiền vay tối đa và tối thiểu là bao nhiêu?", "gold_chunks": ["han-muc-lai-suat#1"], "must_include": [["500.000.000", "500 triệu"], ["10.000.000", "10 triệu"]]}
+{"id": "q09", "question": "Khách có lương 20 triệu một tháng thì vay được tối đa bao nhiêu theo thu nhập?", "gold_chunks": ["han-muc-lai-suat#1"], "must_include": [["12 lần"]]}
+{"id": "q10", "question": "Có thể chọn kỳ hạn 10 tháng không?", "gold_chunks": ["han-muc-lai-suat#2"], "must_include": [["bội số của 6", "6 tháng"]]}
+{"id": "q11", "question": "Lãi suất sản phẩm là cố định hay thả nổi, bao nhiêu phần trăm một năm?", "gold_chunks": ["han-muc-lai-suat#3"], "must_include": [["18%"], ["cố định"]]}
+{"id": "q12", "question": "Tất toán ở tháng thứ 8 thì mất phí bao nhiêu?", "gold_chunks": ["han-muc-lai-suat#4"], "must_include": [["3%"]]}
+{"id": "q13", "question": "Trả nợ trước hạn sau 2 năm thì phí là bao nhiêu?", "gold_chunks": ["han-muc-lai-suat#4"], "must_include": [["1%"]]}
+{"id": "q14", "question": "Nếu khách trả chậm thì bị tính lãi như thế nào?", "gold_chunks": ["han-muc-lai-suat#5"], "must_include": [["150%"]]}
+{"id": "q15", "question": "Khách có phải đóng phí hồ sơ hay mua bảo hiểm không?", "gold_chunks": ["han-muc-lai-suat#6"], "must_include": [["không thu phí"], ["bảo hiểm"]]}
+{"id": "q16", "question": "Tiền thưởng Tết có được cộng vào thu nhập khi xét vay không?", "gold_chunks": ["tham-dinh-thu-nhap#1"], "must_include": [["không được tính", "không tính"]]}
+{"id": "q17", "question": "Khách khai thu nhập cao hơn phiếu lương thì xử lý ra sao?", "gold_chunks": ["tham-dinh-thu-nhap#2"], "must_include": [["10%"]]}
+{"id": "q18", "question": "Tỷ lệ nợ trên thu nhập tối đa là bao nhiêu và tính thế nào?", "gold_chunks": ["tham-dinh-thu-nhap#3"], "must_include": [["50%"]]}
+{"id": "q19", "question": "Thẻ tín dụng của khách được tính vào nghĩa vụ trả nợ như thế nào?", "gold_chunks": ["tham-dinh-thu-nhap#3"], "must_include": [["5%"]]}
+{"id": "q20", "question": "Hồ sơ có DTI 58% thì bị từ chối luôn phải không?", "gold_chunks": ["tham-dinh-thu-nhap#4"], "must_include": [["không bị từ chối tự động", "không tự động từ chối", "không bị từ chối"], ["giảm số tiền vay", "kéo dài kỳ hạn"]]}
+{"id": "q21", "question": "Vay 250 triệu thì cần thêm giấy tờ gì?", "gold_chunks": ["tham-dinh-thu-nhap#5", "ho-so-yeu-cau#2"], "must_include": [["sao kê"], ["3 tháng"]]}
+{"id": "q22", "question": "Bộ hồ sơ tối thiểu gồm những giấy tờ nào?", "gold_chunks": ["ho-so-yeu-cau#1"], "must_include": [["đơn đề nghị"], ["căn cước"], ["phiếu lương"]]}
+{"id": "q23", "question": "Căn cước của khách đã hết hạn tuần trước thì có nhận hồ sơ không?", "gold_chunks": ["ho-so-yeu-cau#4"], "must_include": [["không được chấp nhận", "không chấp nhận", "không nhận"], ["bổ sung"]]}
+{"id": "q24", "question": "Tên trên phiếu lương khác tên trên căn cước thì làm gì?", "gold_chunks": ["ho-so-yeu-cau#5"], "must_include": [["thẩm định viên"]]}
+{"id": "q25", "question": "Hồ sơ vào hàng chờ thẩm định viên thì phải xử lý trong bao lâu?", "gold_chunks": ["quy-trinh-xu-ly#3"], "must_include": [["4 giờ"]]}
+{"id": "q26", "question": "Khoản vay 150 triệu do cấp nào phê duyệt?", "gold_chunks": ["quy-trinh-xu-ly#4"], "must_include": [["trưởng phòng"]]}
+{"id": "q27", "question": "Sau khi ký hợp đồng bao lâu thì khách nhận được tiền?", "gold_chunks": ["quy-trinh-xu-ly#5"], "must_include": [["1 ngày làm việc"]]}
+{"id": "q28", "question": "Hệ thống tự động có được quyết định cho vay hay từ chối không?", "gold_chunks": ["bao-ve-du-lieu#3", "quy-trinh-xu-ly#1"], "must_include": [["người có thẩm quyền"]]}
+{"id": "q29", "question": "Hồ sơ bị trả lại thì ngân hàng giữ dữ liệu bao lâu?", "gold_chunks": ["bao-ve-du-lieu#4"], "must_include": [["2 năm"]]}
+{"id": "q30", "question": "Trên màn hình danh sách hồ sơ, số căn cước được hiển thị như thế nào?", "gold_chunks": ["bao-ve-du-lieu#2"], "must_include": [["3 chữ số"]]}
+{"id": "o01", "question": "Lãi suất vay mua nhà hiện nay là bao nhiêu?", "gold_chunks": [], "must_include": []}
+{"id": "o02", "question": "Phí thường niên của thẻ tín dụng là bao nhiêu?", "gold_chunks": [], "must_include": []}
+{"id": "o03", "question": "Chi nhánh có làm việc vào sáng thứ bảy không?", "gold_chunks": [], "must_include": []}
+{"id": "o04", "question": "Lãi suất tiết kiệm kỳ hạn 12 tháng là bao nhiêu?", "gold_chunks": [], "must_include": []}
+{"id": "o05", "question": "Tỷ giá USD hôm nay là bao nhiêu?", "gold_chunks": [], "must_include": []}
+{"id": "o06", "question": "Khách quên mật khẩu ngân hàng điện tử thì làm thế nào?", "gold_chunks": [], "must_include": []}

@@ -1,0 +1,58 @@
+{
+  "as_of": "2026-10-01",
+  "defect": "ID_MISMATCH",
+  "expected_findings": [
+    "ID_MISMATCH"
+  ],
+  "expected_decision": "needs_review",
+  "salary": {
+    "gross": 14000000,
+    "basic": 11900000,
+    "allowance": 2100000,
+    "insurance": 1470000,
+    "tax": 76000,
+    "net": 12454000
+  },
+  "province": "Hà Nội",
+  "style": {
+    "form": "table",
+    "payslip": "lines",
+    "form_scanned": false
+  },
+  "documents": {
+    "don-de-nghi-vay.pdf": {
+      "doc_type": "application_form",
+      "fields": {
+        "full_name": "Đỗ Văn Hải",
+        "date_of_birth": "15/03/1991",
+        "id_number": "001091070772",
+        "phone": "0948152156",
+        "employer": "Công ty CP Xây dựng Đông Á",
+        "declared_monthly_income": "12 triệu đồng",
+        "existing_monthly_debt": "1.500.000 đồng",
+        "requested_amount": "109 triệu đồng",
+        "term_months": "3 năm"
+      }
+    },
+    "cccd.pdf": {
+      "doc_type": "national_id",
+      "fields": {
+        "full_name": "ĐỖ VĂN HẢI",
+        "date_of_birth": "15/03/1991",
+        "id_number": "001091077702",
+        "sex": "Nam",
+        "expiry_date": "15/03/2031"
+      }
+    },
+    "phieu-luong.pdf": {
+      "doc_type": "payslip",
+      "fields": {
+        "employee_name": "Đỗ Văn Hải",
+        "employer": "CÔNG TY CP XÂY DỰNG ĐÔNG Á",
+        "pay_period": "09/2026",
+        "gross_income": "14.000.000 đồng",
+        "net_income": "12.454.000 đồng"
+      }
+    }
+  }
+}

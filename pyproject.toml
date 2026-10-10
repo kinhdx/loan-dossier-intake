@@ -1,0 +1,53 @@
+[project]
+name = "loan-dossier-intake"
+version = "0.1.0"
+description = "Loan dossier intake: document classification and extraction with rule-based gating, policy question answering, and an evaluation harness"
+readme = "README.md"
+authors = [
+    { name = "kinhdx", email = "kinhdx@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "anthropic>=1.13.0",
+    "fastapi>=0.143.0",
+    "fastembed>=0.9.0",
+    "langgraph>=1.2.14",
+    "numpy>=2.5.3",
+    "pydantic>=2.14.0",
+    "pymupdf>=1.28.2",
+    "pymupdf-fonts>=1.0.5",
+    "python-dotenv>=1.2.4",
+    "python-multipart>=0.0.32",
+    "uvicorn>=0.54.0",
+]
+
+[project.scripts]
+intake = "loan_intake.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.12.3,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "httpx>=0.28.1",
+    "pytest>=9.1.1",
+    "ruff>=0.17.0",
+]
+
+[tool.uv.build-backend]
+module-name = "loan_intake"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+ignore = ["E501"]
+
+[tool.ruff.lint.flake8-bugbear]
+extend-immutable-calls = ["fastapi.Depends"]

@@ -1,0 +1,58 @@
+{
+  "as_of": "2026-10-01",
+  "defect": "PAYSLIP_NAME_MISMATCH",
+  "expected_findings": [
+    "PAYSLIP_NAME_MISMATCH"
+  ],
+  "expected_decision": "needs_review",
+  "salary": {
+    "gross": 34900000,
+    "basic": 29700000,
+    "allowance": 5200000,
+    "insurance": 3664000,
+    "tax": 1012000,
+    "net": 30224000
+  },
+  "province": "TP. Hồ Chí Minh",
+  "style": {
+    "form": "lines",
+    "payslip": "table",
+    "form_scanned": false
+  },
+  "documents": {
+    "don-de-nghi-vay.pdf": {
+      "doc_type": "application_form",
+      "fields": {
+        "full_name": "Bùi Minh Dũng",
+        "date_of_birth": "2/11/1989",
+        "id_number": "079089735996",
+        "phone": "0954971000",
+        "employer": "Công ty TNHH Điện tử Minh Quang",
+        "declared_monthly_income": "30 triệu đồng",
+        "existing_monthly_debt": "0 đồng",
+        "requested_amount": "22 triệu đồng",
+        "term_months": "12 tháng"
+      }
+    },
+    "cccd.pdf": {
+      "doc_type": "national_id",
+      "fields": {
+        "full_name": "BÙI MINH DŨNG",
+        "date_of_birth": "02/11/1989",
+        "id_number": "079089735996",
+        "sex": "Nam",
+        "expiry_date": "02/11/2029"
+      }
+    },
+    "phieu-luong.pdf": {
+      "doc_type": "payslip",
+      "fields": {
+        "employee_name": "Nguyễn Quang Long",
+        "employer": "CÔNG TY TNHH ĐIỆN TỬ MINH QUANG",
+        "pay_period": "09/2026",
+        "gross_income": "34.900.000 đồng",
+        "net_income": "30.224.000 đồng"
+      }
+    }
+  }
+}

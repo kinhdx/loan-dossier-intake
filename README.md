@@ -35,6 +35,7 @@ files ──► classify (small model) ──► extract fields (model under tes
 | Required field present, dates and amounts parse, ID has 12 digits | `MISSING_FIELD`, `FORMAT_INVALID` | all documents |
 | Extracted value occurs in the document text | `EVIDENCE_NOT_FOUND` | text documents |
 | Name, ID number, date of birth agree between form and card | `NAME_MISMATCH`, `ID_MISMATCH`, `DOB_MISMATCH` | form, card |
+| Names written with diacritics on both documents carry the same diacritics | `NAME_DIACRITICS_DIFFER` | form, card, payslip |
 | Payslip issued to the card holder; same employer as the form | `PAYSLIP_NAME_MISMATCH`, `EMPLOYER_MISMATCH` | payslip |
 | Declared income at most 10% above payslip net | `INCOME_ABOVE_PAYSLIP` | form, payslip |
 | CCCD century/sex digit and birth-year digits match the holder | `ID_NUMBER_INCONSISTENT` | card |
@@ -80,7 +81,7 @@ set only, because Haiku and Sonnet already score 100% on the standard set.
 
 Latency is model time on the critical path; the three files of a dossier are read in parallel.
 
-What the numbers say:
+Observations:
 
 - On text documents and clean scans the smallest model is as accurate as the others at a fourteenth of
   Sonnet's cost per dossier.
@@ -109,7 +110,7 @@ Both rules trade more reviews on poor scans for zero silent errors in this set.
 | Answers stating every key fact | 100% | 100% | 100% |
 | Answers citing a gold section | 100% | 100% | 100% |
 | Out-of-scope questions declined | 6 / 6 | 6 / 6 | 6 / 6 |
-| In-scope questions wrongly declined | 0 | 0 | 0 |
+| In-scope questions declined | 0 | 0 | 0 |
 | Cost per question | $0.00018 | $0.0038 | $0.0083 |
 | Latency p50 | 2.4 s | 2.2 s | 2.8 s |
 

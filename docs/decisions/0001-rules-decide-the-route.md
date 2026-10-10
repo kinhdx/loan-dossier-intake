@@ -20,10 +20,9 @@ and the CCCD number itself encodes the holder's century, sex and birth year.
 
 ## Consequences
 
-- A misread usually produces a contradiction, so it lands in review instead of passing silently. The
-  evaluation counts the cases where it does not (`ready_with_wrong_data`).
-- More dossiers go to review than strictly necessary when scans are poor. That cost is visible in the
-  false review rate and is the number to bring down, by better capture or a stronger model, not by relaxing
-  rules.
+- A misread scan tends to contradict another document or a CCCD rule, and that contradiction sends the dossier
+  to review. The evaluation counts the cases where it does not (`ready_with_wrong_data`).
+- Poor scans send some clean dossiers to review. The false review rate shows that cost. Bring it down with
+  better capture or a stronger model, and keep the rules as they are.
 - Every rule is unit-tested against the synthetic dossiers with perfect extraction, so a rule change that
   breaks an expected outcome fails CI.

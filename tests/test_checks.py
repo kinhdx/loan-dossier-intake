@@ -83,3 +83,16 @@ def test_extraction_error_is_never_ready(limits, as_of):
     docs[0].error = "the model declined the request"
     findings, _ = run_checks(docs, limits, as_of)
     assert decide(findings) != Decision.READY
+
+
+@pytest.mark.parametrize("term, code", [("ba mươi sáu tháng", "FORMAT_INVALID"), ("3 năm 6 tháng", "FORMAT_INVALID"),
+                                        ("7 tháng", "TERM_OUT_OF_RANGE")])
+def test_unreadable_or_off_step_term_goes_to_review(term, code, limits, as_of):
+    """An unparsed term would otherwise skip the term, age-at-maturity and debt-to-income checks."""
+    clean = next(load_expected(p) for p in sorted(FIXTURES.iterdir()) if load_expected(p)["defect"] == "clean")
+    docs = truth_documents(clean, scanned=True)
+    form = next(d for d in docs if d.doc_type == DocType.APPLICATION_FORM)
+    form.fields["term_months"] = ExtractedField(term, "")
+    findings, _ = run_checks(docs, limits, as_of)
+    assert decide(findings) == Decision.REVIEW
+    assert any(f.code == code and f.field == "term_months" for f in findings)

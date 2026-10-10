@@ -32,7 +32,7 @@ files ──► classify (small model) ──► extract fields (model under tes
 | Check | Finding | Applies to |
 |---|---|---|
 | Every required document type present | `MISSING_DOCUMENT` → incomplete | dossier |
-| Required field present, dates and amounts parse, ID has 12 digits | `MISSING_FIELD`, `FORMAT_INVALID` | all documents |
+| Required field present, dates, amounts and term parse, ID has 12 digits | `MISSING_FIELD`, `FORMAT_INVALID` | all documents |
 | Extracted value occurs in the document text | `EVIDENCE_NOT_FOUND` | text documents |
 | Name, ID number, date of birth agree between form and card | `NAME_MISMATCH`, `ID_MISMATCH`, `DOB_MISMATCH` | form, card |
 | Names written with diacritics on both documents carry the same diacritics | `NAME_DIACRITICS_DIFFER` | form, card, payslip |
@@ -41,7 +41,7 @@ files ──► classify (small model) ──► extract fields (model under tes
 | CCCD century/sex digit and birth-year digits match the holder | `ID_NUMBER_INCONSISTENT` | card |
 | Card expiry falls on the holder's 25th, 40th or 60th birthday | `ID_EXPIRY_IMPLAUSIBLE` | card |
 | Card not expired | `ID_EXPIRED` | card |
-| Age, amount, term, income multiple, minimum income, debt-to-income | `AGE_OUT_OF_RANGE`, `AMOUNT_OUT_OF_RANGE`, `AMOUNT_ABOVE_INCOME_MULTIPLE`, `TERM_OUT_OF_RANGE`, `INCOME_BELOW_MINIMUM`, `DTI_ABOVE_LIMIT` | form, payslip |
+| Age, amount, term (range and 6-month steps), income multiple, minimum income, debt-to-income | `AGE_OUT_OF_RANGE`, `AMOUNT_OUT_OF_RANGE`, `AMOUNT_ABOVE_INCOME_MULTIPLE`, `TERM_OUT_OF_RANGE`, `INCOME_BELOW_MINIMUM`, `DTI_ABOVE_LIMIT` | form, payslip |
 
 Scanned documents cannot be grounded in a text layer. They are covered by the cross-document rules and the
 card's own number and expiry rules. Thresholds live in `policy/thresholds.json`; the same numbers are written
@@ -93,9 +93,9 @@ Observations:
 
 **What the evaluation changed.** Two rules exist because an earlier run showed a misread passing as ready:
 
-- `ID_EXPIRY_IMPLAUSIBLE`: Haiku read a blurred expiry date 10/01/2044 as 10/01/2046, and nothing
-  contradicted it. A citizen ID card expires on the holder's 25th, 40th or 60th birthday, so any other date is a
-  misread.
+- `ID_EXPIRY_IMPLAUSIBLE`: Haiku misread a blurred expiry date, and nothing contradicted it. A citizen ID card
+  expires on the holder's 25th, 40th or 60th birthday, so any other date is a misread. In the committed Haiku
+  report the rule catches H007, where 10/01/2041 was read as 10/01/2045.
 - `NAME_DIACRITICS_DIFFER`: Sonnet and Opus read "THÙY" as "THÚY" on two clean stress dossiers, and the
   name check ignored diacritics. Names written with diacritics on both documents must now match them exactly;
   a form typed without diacritics is still accepted.

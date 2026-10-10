@@ -102,6 +102,9 @@ def _field_checks(d: ExtractedDocument) -> list[Finding]:
             out.append(Finding("FORMAT_INVALID", REVIEW, f"{name} is not a date: {value!r}", d.name, name))
         if name in AMOUNT_FIELDS and parse_amount(value) is None:
             out.append(Finding("FORMAT_INVALID", REVIEW, f"{name} is not an amount: {value!r}", d.name, name))
+        if name == "term_months" and parse_term_months(value) is None:
+            out.append(Finding("FORMAT_INVALID", REVIEW, f"term_months is not a number of months or years: {value!r}",
+                               d.name, name))
         if name == "id_number" and len(digits_only(value)) != 12:
             out.append(Finding("FORMAT_INVALID", REVIEW, "ID number must have 12 digits", d.name, name))
         if not d.scanned:
@@ -193,9 +196,11 @@ def _product_checks(form: ExtractedDocument, slip, limits: Thresholds, as_of: da
     if amount and net and amount > limits.max_income_multiple * net:
         out.append(Finding("AMOUNT_ABOVE_INCOME_MULTIPLE", REVIEW, f"requested amount is more than "
                            f"{limits.max_income_multiple} times net income", form.name, "requested_amount"))
-    if term is not None and not limits.min_term_months <= term <= limits.max_term_months:
-        out.append(Finding("TERM_OUT_OF_RANGE", REVIEW, f"term {term} months is outside "
-                           f"{limits.min_term_months}-{limits.max_term_months}", form.name, "term_months"))
+    if term is not None and (not limits.min_term_months <= term <= limits.max_term_months
+                             or term % limits.term_step_months):
+        out.append(Finding("TERM_OUT_OF_RANGE", REVIEW, f"term {term} months is not a multiple of "
+                           f"{limits.term_step_months} between {limits.min_term_months} and {limits.max_term_months}",
+                           form.name, "term_months"))
     if dob:
         age = as_of.year - dob.year - ((as_of.month, as_of.day) < (dob.month, dob.day))
         metrics["age"] = age

@@ -18,7 +18,7 @@ from fastapi import Depends, FastAPI, HTTPException, UploadFile
 from pydantic import BaseModel
 
 from loan_intake.cli import DB_PATH, _index
-from loan_intake.documents import load
+from loan_intake.documents import UnreadableDocument, load
 from loan_intake.llm import AnthropicClient, ModelClient
 from loan_intake.normalize import mask_id
 from loan_intake.pipeline import Settings, process
@@ -62,6 +62,8 @@ def create_dossier(files: list[UploadFile], store: Store = Depends(get_store),
     # Sync handler: FastAPI runs it in a worker thread, so the model calls do not block the event loop.
     try:
         sources = [load(f.filename or "upload", f.file.read()) for f in files]
+    except UnreadableDocument as e:
+        raise HTTPException(status_code=422, detail=str(e)) from e
     except ValueError as e:
         raise HTTPException(status_code=415, detail=str(e)) from e
     dossier_id = uuid.uuid4().hex[:12]

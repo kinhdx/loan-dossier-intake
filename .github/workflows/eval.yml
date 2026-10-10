@@ -8,7 +8,9 @@ on:
         description: Extraction and answer model
         default: claude-opus-5-5
       suite:
-        description: idp, rag or retrieval
+        description: Evaluation suite
+        type: choice
+        options: [idp, rag, retrieval]
         default: idp
 
 jobs:
@@ -20,8 +22,10 @@ jobs:
         with:
           python-version: "3.12"
       - run: uv sync --locked
-      - run: uv run intake eval ${{ inputs.suite }} --model ${{ inputs.model }}
+      - run: uv run intake eval "$SUITE" --model "$MODEL"
         env:
+          SUITE: ${{ inputs.suite }}
+          MODEL: ${{ inputs.model }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
       - uses: actions/upload-artifact@v4
         with:

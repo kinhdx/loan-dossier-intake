@@ -10,6 +10,8 @@ def test_parse_amount_vietnamese_formats():
     assert parse_amount("8.500.000đ") == 8_500_000
     assert parse_amount("15 triệu đồng") == 15_000_000
     assert parse_amount("15,5 triệu") == 15_500_000
+    assert parse_amount("1.5 triệu") == 1_500_000
+    assert parse_amount("1.500 triệu") == 1_500_000_000
     assert parse_amount("không rõ") is None
     assert parse_amount("") is None
 
@@ -25,6 +27,10 @@ def test_parse_int_term():
     assert parse_int("") is None
     assert parse_term_months("3 năm") == 36
     assert parse_term_months("24 tháng") == 24
+    assert parse_term_months("5 năm.") == 60
+    assert parse_term_months("36") == 36
+    assert parse_term_months("3 năm 6 tháng") is None
+    assert parse_term_months("ba mươi sáu tháng") is None
 
 
 def test_fold_removes_diacritics_and_case():

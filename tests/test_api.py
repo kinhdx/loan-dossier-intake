@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import pytest
 from fastapi.testclient import TestClient
 from test_pipeline import FixtureClient
 
@@ -37,4 +38,13 @@ def test_unsupported_file_type_is_rejected(tmp_path):
     api.app.dependency_overrides[api.get_client] = lambda: None
     response = TestClient(api.app).post("/dossiers", files=[("files", ("note.docx", b"x", "application/octet-stream"))])
     assert response.status_code == 415
+    api.app.dependency_overrides.clear()
+
+
+@pytest.mark.parametrize("name", ["scan.png", "form.pdf"])
+def test_damaged_file_is_rejected(tmp_path, name):
+    api.app.dependency_overrides[api.get_store] = lambda: Store(tmp_path / "test.db")
+    api.app.dependency_overrides[api.get_client] = lambda: None
+    response = TestClient(api.app).post("/dossiers", files=[("files", (name, b"not really a file", "image/png"))])
+    assert response.status_code == 422
     api.app.dependency_overrides.clear()

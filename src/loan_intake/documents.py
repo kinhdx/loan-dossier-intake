@@ -16,13 +16,24 @@ RENDER_DPI = 150
 IMAGE_SUFFIXES = {".png", ".jpg", ".jpeg"}
 
 
+class UnreadableDocument(ValueError):
+    """The file has a supported type but its content cannot be opened."""
+
+
 def load(name: str, data: bytes) -> SourceDocument:
     suffix = Path(name).suffix.lower()
+    if suffix not in IMAGE_SUFFIXES | {".pdf"}:
+        raise ValueError(f"unsupported file type: {name}")
+    try:
+        return _load(name, suffix, data)
+    except (RuntimeError, ValueError, pymupdf.mupdf.FzErrorBase) as e:  # pymupdf errors for damaged files
+        raise UnreadableDocument(f"cannot read {name}: {e}") from e
+
+
+def _load(name: str, suffix: str, data: bytes) -> SourceDocument:
     if suffix in IMAGE_SUFFIXES:
         pix = pymupdf.Pixmap(data)
         return SourceDocument(name, [Page(1, "", pix.tobytes("png"))])
-    if suffix != ".pdf":
-        raise ValueError(f"unsupported file type: {name}")
     pages = []
     with pymupdf.open(stream=data, filetype="pdf") as pdf:
         for i, page in enumerate(pdf, start=1):

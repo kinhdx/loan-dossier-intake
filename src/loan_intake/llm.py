@@ -66,6 +66,7 @@ class AnthropicClient:
         import anthropic
 
         self._client = anthropic.Anthropic(timeout=120.0, max_retries=3)
+        self._api_error = anthropic.APIError
         self._max_tokens = max_tokens
 
     def complete(self, *, model: str, system: str, content: list[dict], schema: dict, step: str,
@@ -80,7 +81,10 @@ class AnthropicClient:
         if model in FALLBACK_MODELS:
             request.update(betas=["server-side-fallback-2026-07-01"], fallbacks="default")
         started = time.monotonic()
-        response = self._client.beta.messages.create(**request)
+        try:
+            response = self._client.beta.messages.create(**request)
+        except self._api_error as e:  # retries are exhausted by now; fail this document, not the dossier
+            raise ModelError(f"model call failed: {e.__class__.__name__}") from e
         u = response.usage
         read = getattr(u, "cache_read_input_tokens", 0) or 0
         write = getattr(u, "cache_creation_input_tokens", 0) or 0
@@ -95,4 +99,7 @@ class AnthropicClient:
         text = next((b.text for b in response.content if b.type == "text"), None)
         if text is None:
             raise ModelError("no structured answer was returned")
-        return json.loads(text), usage
+        try:
+            return json.loads(text), usage
+        except json.JSONDecodeError as e:
+            raise ModelError("the structured answer is not valid JSON") from e

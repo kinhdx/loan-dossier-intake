@@ -7,6 +7,7 @@
   "max_amount": 500000000,
   "min_term_months": 6,
   "max_term_months": 60,
+  "term_step_months": 6,
   "annual_rate": 0.18,
   "income_tolerance": 0.1,
   "max_income_multiple": 12

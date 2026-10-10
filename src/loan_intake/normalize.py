@@ -11,6 +11,7 @@ import unicodedata
 from datetime import date
 
 _AMOUNT_NOISE = re.compile(r"(vnđ|vnd|đồng|đ|dong)", re.IGNORECASE)
+_TERM = re.compile(r"(\d+)\s*(thang|nam)?")  # matched on folded text
 _MILLIONS = re.compile(r"^([\d.,]+)\s*(trieu|tr)")  # matched on folded text
 _DATE = re.compile(r"(\d{1,2})\s*[/.\-]\s*(\d{1,2})\s*[/.\-]\s*(\d{4})")
 
@@ -25,11 +26,16 @@ def parse_amount(raw: str | None) -> int | None:
     text = _AMOUNT_NOISE.sub("", raw).strip().lower()
     millions = _MILLIONS.search(fold(text))
     if millions:
-        number = millions.group(1).replace(".", "").replace(",", ".")
-        try:
-            return round(float(number) * 1_000_000)
-        except ValueError:
+        number = millions.group(1)
+        # Before a unit word, a final separator followed by one or two digits is a decimal point:
+        # "15,5 triệu" and "1.5 triệu" are 15.5 and 1.5 million; "1.500 triệu" is 1,500 million.
+        decimal = re.search(r"[.,](\d{1,2})$", number)
+        whole = number[:decimal.start()] if decimal else number
+        whole = re.sub(r"[.,]", "", whole)
+        if not whole.isdigit():
             return None
+        value = float(f"{whole}.{decimal.group(1)}") if decimal else int(whole)
+        return round(value * 1_000_000)
     digits = re.sub(r"[.,\s]", "", text)
     return int(digits) if digits.isdigit() else None
 
@@ -42,11 +48,15 @@ def parse_int(raw: str | None) -> int | None:
 
 
 def parse_term_months(raw: str | None) -> int | None:
-    """'36 tháng' -> 36, '3 năm' -> 36."""
-    number = parse_int(raw)
-    if number is None:
+    """'36 tháng' -> 36, '3 năm' -> 36. Anything else, including mixed units such as '3 năm 6 tháng', is None
+    so that the field is reported as unreadable instead of silently skipping the term and DTI checks."""
+    if not raw:
         return None
-    return number * 12 if fold(raw).split()[-1:] == ["nam"] else number
+    match = _TERM.fullmatch(fold(raw).strip().rstrip("."))
+    if not match:
+        return None
+    number = int(match.group(1))
+    return number * 12 if match.group(2) == "nam" else number
 
 
 def parse_date(raw: str | None) -> date | None:

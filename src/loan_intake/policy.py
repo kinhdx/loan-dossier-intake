@@ -23,6 +23,7 @@ class Thresholds:
     max_income_multiple: int
     min_term_months: int
     max_term_months: int
+    term_step_months: int  # terms are offered in multiples of this many months
     annual_rate: float
     income_tolerance: float  # declared income may exceed the payslip by this fraction before it is flagged
 

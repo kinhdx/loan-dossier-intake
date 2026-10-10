@@ -96,3 +96,18 @@ def test_unreadable_or_off_step_term_goes_to_review(term, code, limits, as_of):
     findings, _ = run_checks(docs, limits, as_of)
     assert decide(findings) == Decision.REVIEW
     assert any(f.code == code and f.field == "term_months" for f in findings)
+
+
+@pytest.mark.parametrize("id_number, sex, consistent", [
+    ("001203012345", "Nam", True),    # 2: male, born 2000-2099
+    ("001303012345", "Nữ", True),     # 3: female, born 2000-2099
+    ("001103012345", "Nữ", False),    # 1 means born 1900-1999, so 1903, not 2003
+    ("001203012345", "Nữ", False),    # 2 is the male digit
+])
+def test_id_number_century_digit_for_holders_born_from_2000(id_number, sex, consistent, limits, as_of):
+    fields = {"full_name": "TRẦN MINH ANH", "date_of_birth": "15/04/2003", "id_number": id_number, "sex": sex,
+              "expiry_date": "15/04/2028"}
+    card = ExtractedDocument("cccd.pdf", DocType.NATIONAL_ID, True,
+                             {k: ExtractedField(v, "") for k, v in fields.items()})
+    findings, _ = run_checks([card], limits, as_of)
+    assert ("ID_NUMBER_INCONSISTENT" in {f.code for f in findings}) is not consistent

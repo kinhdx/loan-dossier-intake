@@ -10,7 +10,8 @@ product limits is decided here, by rules that can be read, tested and audited:
                     ignore diacritics only when one side was written without them);
                     employer and income agree between form and payslip
 5. ID card rules  - the century/sex digit and birth-year digits of the CCCD match the holder; the expiry date
-                    falls on the holder's 25th, 40th or 60th birthday; the card has not expired
+                    falls on the holder's 25th, 40th or 60th birthday, or reads "Không thời hạn" for a holder
+                    aged 58 or over; the card has not expired
 6. product limits - age, amount, income multiple, term, minimum income and debt-to-income
                     from policy/thresholds.json
 
@@ -47,6 +48,9 @@ AMOUNT_FIELDS = {"declared_monthly_income", "existing_monthly_debt", "requested_
                  "net_income"}
 OPTIONAL_FIELDS = {"existing_monthly_debt", "phone", "pay_period", "gross_income"}
 ID_VALIDITY_AGES = {25, 40, 60}
+# A card issued from the holder's 58th birthday on is valid for life and prints this instead of a date.
+NO_EXPIRY = "khong thoi han"
+NO_EXPIRY_MIN_AGE = 58
 
 
 def run_checks(docs: list[ExtractedDocument], limits: Thresholds, as_of: date) -> tuple[list[Finding], dict]:
@@ -89,6 +93,14 @@ def decide(findings: list[Finding]) -> Decision:
     return Decision.READY
 
 
+def _age(dob: date, as_of: date) -> int:
+    return as_of.year - dob.year - ((as_of.month, as_of.day) < (dob.month, dob.day))
+
+
+def _no_expiry(value: str) -> bool:
+    return fold(value).rstrip(".") == NO_EXPIRY
+
+
 def _field_checks(d: ExtractedDocument) -> list[Finding]:
     out: list[Finding] = []
     source = squash(d.source_text)
@@ -98,7 +110,7 @@ def _field_checks(d: ExtractedDocument) -> list[Finding]:
             if name not in OPTIONAL_FIELDS:
                 out.append(Finding("MISSING_FIELD", REVIEW, f"{name} not found", d.name, name))
             continue
-        if name in DATE_FIELDS and parse_date(value) is None:
+        if name in DATE_FIELDS and parse_date(value) is None and not (name == "expiry_date" and _no_expiry(value)):
             out.append(Finding("FORMAT_INVALID", REVIEW, f"{name} is not a date: {value!r}", d.name, name))
         if name in AMOUNT_FIELDS and parse_amount(value) is None:
             out.append(Finding("FORMAT_INVALID", REVIEW, f"{name} is not an amount: {value!r}", d.name, name))
@@ -170,6 +182,11 @@ def _id_card_checks(card: ExtractedDocument, as_of: date) -> list[Finding]:
             out.append(Finding("ID_NUMBER_INCONSISTENT", REVIEW,
                                "century/sex or birth-year digits of the ID number do not match the holder",
                                card.name, "id_number"))
+    if _no_expiry(card.get("expiry_date")):
+        if dob and _age(dob, as_of) < NO_EXPIRY_MIN_AGE:
+            out.append(Finding("ID_EXPIRY_IMPLAUSIBLE", REVIEW, f"card without an expiry date, but the holder is "
+                               f"under {NO_EXPIRY_MIN_AGE}", card.name, "expiry_date"))
+        return out
     expiry = parse_date(card.get("expiry_date"))
     if expiry and expiry < as_of:
         out.append(Finding("ID_EXPIRED", REVIEW, f"ID card expired on {expiry:%d/%m/%Y}", card.name, "expiry_date"))
@@ -202,7 +219,7 @@ def _product_checks(form: ExtractedDocument, slip, limits: Thresholds, as_of: da
                            f"{limits.term_step_months} between {limits.min_term_months} and {limits.max_term_months}",
                            form.name, "term_months"))
     if dob:
-        age = as_of.year - dob.year - ((as_of.month, as_of.day) < (dob.month, dob.day))
+        age = _age(dob, as_of)
         metrics["age"] = age
         age_at_maturity = age + (term or 0) / 12
         if age < limits.min_age or age_at_maturity > limits.max_age_at_maturity:

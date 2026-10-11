@@ -24,7 +24,8 @@ files ──► classify (small model) ──► extract fields (model under tes
 - **Policy questions**: hybrid retrieval (multilingual embeddings computed locally, plus BM25 over
   diacritic-folded words) over the product policy, then an answer that must cite the retrieved sections or
   say the policy does not cover the question (`rag/`).
-- **API**: upload a dossier, read the result, work the review queue, ask a policy question (`api.py`).
+- **API**: upload a dossier, read the result, work the review queue, ask a policy question (`api.py`). An
+  incomplete dossier goes back to the customer: it stays out of the queue and a reviewer cannot accept it.
 - **Journal**: tokens, cost and latency for every model call, without document content (`store.py`).
 
 ## Gating rules
@@ -39,7 +40,7 @@ files ──► classify (small model) ──► extract fields (model under tes
 | Payslip issued to the card holder; same employer as the form | `PAYSLIP_NAME_MISMATCH`, `EMPLOYER_MISMATCH` | payslip |
 | Declared income at most 10% above payslip net | `INCOME_ABOVE_PAYSLIP` | form, payslip |
 | CCCD century/sex digit and birth-year digits match the holder | `ID_NUMBER_INCONSISTENT` | card |
-| Card expiry falls on the holder's 25th, 40th or 60th birthday | `ID_EXPIRY_IMPLAUSIBLE` | card |
+| Card expiry falls on the holder's 25th, 40th or 60th birthday, or "Không thời hạn" for a holder aged 58 or over | `ID_EXPIRY_IMPLAUSIBLE` | card |
 | Card not expired | `ID_EXPIRED` | card |
 | Age, amount, term (range and 6-month steps), income multiple, minimum income, debt-to-income | `AGE_OUT_OF_RANGE`, `AMOUNT_OUT_OF_RANGE`, `AMOUNT_ABOVE_INCOME_MULTIPLE`, `TERM_OUT_OF_RANGE`, `INCOME_BELOW_MINIMUM`, `DTI_ABOVE_LIMIT` | form, payslip |
 

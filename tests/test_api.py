@@ -48,3 +48,22 @@ def test_damaged_file_is_rejected(tmp_path, name):
     response = TestClient(api.app).post("/dossiers", files=[("files", (name, b"not really a file", "image/png"))])
     assert response.status_code == 422
     api.app.dependency_overrides.clear()
+
+
+def test_incomplete_dossier_is_not_reviewed(tmp_path, fixture_dirs):
+    folder = next(p for p in fixture_dirs if FixtureClient(p).expected["expected_decision"] == "incomplete")
+    store = Store(tmp_path / "test.db")
+    api.app.dependency_overrides[api.get_store] = lambda: store
+    api.app.dependency_overrides[api.get_client] = lambda: FixtureClient(folder)
+    client = TestClient(api.app)
+    files = [("files", (p.name, p.read_bytes(), "application/pdf")) for p in sorted(folder.glob("*.pdf"))]
+    try:
+        created = client.post("/dossiers", files=files).json()
+        assert created["decision"] == "incomplete"
+        assert client.get("/review-queue").json() == []
+        response = client.post(f"/dossiers/{created['id']}/review",
+                               json={"reviewer": "analyst-01", "action": "accept", "note": "looks fine"})
+        assert response.status_code == 409
+        assert client.get(f"/dossiers/{created['id']}").json()["status"] != "ready"
+    finally:
+        api.app.dependency_overrides.clear()

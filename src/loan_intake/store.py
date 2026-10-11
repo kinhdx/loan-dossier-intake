@@ -11,7 +11,7 @@ import sqlite3
 from datetime import UTC, datetime
 from pathlib import Path
 
-from loan_intake.schemas import DossierResult, Usage
+from loan_intake.schemas import Decision, DossierResult, Usage
 
 SCHEMA = """
 CREATE TABLE IF NOT EXISTS dossiers (
@@ -44,7 +44,8 @@ class Store:
         self._db.executescript(SCHEMA)
 
     def save(self, result: DossierResult) -> None:
-        status = "open" if result.decision.value != "ready_for_underwriting" else "ready"
+        # A dossier missing a required document goes back to the customer, not to the review queue.
+        status = {Decision.READY: "ready", Decision.INCOMPLETE: "awaiting_documents"}.get(result.decision, "open")
         payload = json.dumps(dataclasses.asdict(result), default=_json_default, ensure_ascii=False)
         with self._db:
             self._db.execute("INSERT OR REPLACE INTO dossiers VALUES (?,?,?,?,?)",

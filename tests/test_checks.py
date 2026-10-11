@@ -111,3 +111,20 @@ def test_id_number_century_digit_for_holders_born_from_2000(id_number, sex, cons
                              {k: ExtractedField(v, "") for k, v in fields.items()})
     findings, _ = run_checks([card], limits, as_of)
     assert ("ID_NUMBER_INCONSISTENT" in {f.code for f in findings}) is not consistent
+
+
+@pytest.mark.parametrize("dob, expiry, flagged", [
+    ("12/02/1967", "Không thời hạn", False),   # 59 on the assessment date
+    ("01/10/1968", "KHÔNG THỜI HẠN", False),   # turns 58 on the assessment date
+    ("02/10/1968", "Không thời hạn", True),    # still 57
+    ("15/04/1990", "Không thời hạn", True),
+])
+def test_card_without_expiry_date(dob, expiry, flagged, limits, as_of):
+    fields = {"full_name": "PHẠM VĂN HÙNG", "date_of_birth": dob, "id_number": f"0010{dob[-2:]}012345",
+              "sex": "Nam", "expiry_date": expiry}
+    card = ExtractedDocument("cccd.pdf", DocType.NATIONAL_ID, True,
+                             {k: ExtractedField(v, "") for k, v in fields.items()})
+    findings, _ = run_checks([card], limits, as_of)
+    on_expiry = [f for f in findings if f.field == "expiry_date"]
+    assert bool(on_expiry) is flagged
+    assert all(f.severity.value == "review" for f in on_expiry)

@@ -2,8 +2,9 @@
 
     POST /dossiers                 upload the files of one dossier; returns the decision and findings
     GET  /dossiers/{id}            full result, including extracted fields and reviewer actions
-    GET  /review-queue             dossiers waiting for a reviewer
-    POST /dossiers/{id}/review     accept or return a dossier, with the reviewer's note
+    GET  /review-queue             dossiers waiting for a reviewer (incomplete ones go back to the customer)
+    POST /dossiers/{id}/review     accept or return a dossier, with the reviewer's note; an incomplete
+                                   dossier cannot be accepted (409)
     POST /ask                      answer a question from the policy documents
 
 ID numbers are masked in every response except GET /dossiers/{id}, which is the case-handling view.
@@ -23,6 +24,7 @@ from loan_intake.llm import AnthropicClient, ModelClient
 from loan_intake.normalize import mask_id
 from loan_intake.pipeline import Settings, process
 from loan_intake.rag.answer import ask
+from loan_intake.schemas import Decision
 from loan_intake.store import Store
 
 app = FastAPI(title="Loan dossier intake")
@@ -95,8 +97,11 @@ def review_queue(store: Store = Depends(get_store)) -> list[dict]:
 
 @app.post("/dossiers/{dossier_id}/review")
 def review(dossier_id: str, body: ReviewIn, store: Store = Depends(get_store)) -> dict:
-    if store.get(dossier_id) is None:
+    record = store.get(dossier_id)
+    if record is None:
         raise HTTPException(status_code=404, detail="dossier not found")
+    if body.action == "accept" and record["decision"] == Decision.INCOMPLETE:
+        raise HTTPException(status_code=409, detail="dossier is missing a required document and cannot be accepted")
     store.review(dossier_id, body.reviewer, body.action, body.note)
     return {"id": dossier_id, "status": "ready" if body.action == "accept" else "returned"}
 
